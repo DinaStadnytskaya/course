@@ -87,7 +87,7 @@
     "react-router-dom": "^6.2.1"
   },
   "loki": {
-    "configurations": {
+      "configurations": {
       "chrome.laptop": {
         "target": "chrome.docker",
         "width": 1366,
