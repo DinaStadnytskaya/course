@@ -2,14 +2,19 @@ import { render, screen } from '@testing-library/react';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 describe('Button', () => {
-    test('Test class', () => {
-        render(<Button theme={ThemeButton.CLEAR}>Test</Button>);
-        expect(screen.getByText('Test')).toHaveClass('clear');
-        screen.debug();
-    });
     test('Test render', () => {
-        render(<Button theme={ThemeButton.CLEAR}>Test</Button>);
-        expect(screen.getByText('Test')).toBeInTheDocument();
+        // eslint-disable-next-line react/jsx-tag-spacing
+        render(
+            <Button theme={ThemeButton.CLEAR || ThemeButton.RED || ThemeButton.OUTLINE}>
+                TEST
+
+            </Button>,
+        );
+        expect(screen.getByText('TEST')).toBeInTheDocument();
+    });
+    test('Test clear', () => {
+        render(<Button theme={ThemeButton.CLEAR}>TEST</Button>);
+        expect(screen.getByText('TEST')).toHaveClass('clear');
         screen.debug();
     });
 });
