@@ -37,13 +37,14 @@ export const Sidebar = ({ className }: SidebarProps) => {
             </Button>
             <div className={cls.items}>
                 <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.main}>
-                    <BsJournalRichtext className={cls.icon} />
+                    <BsHouseFill className={cls.icon} />
+
                     <span className={cls.link}>
                         {t('главная')}
                     </span>
                 </AppLink>
                 <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about}>
-                    <BsHouseFill className={cls.icon} />
+                    <BsJournalRichtext className={cls.icon} />
                     <span className={cls.link}>
                         {t('О сайте')}
                     </span>
