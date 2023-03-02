@@ -1,18 +1,18 @@
 name: linting, testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 
-on:
- push:
-  branches:[master]
- pull_request:
-  branches:[master]
+    on:
+        push:
+           branches:[master]
+pull_request:
+    branches:[master]
 jobs:
-  pipeline:
-    runs-on:  ubuntu-latest 
+    pipeline:
+        runs-on:  ubuntu-latest 
     matrix:
-         node-version:[17.x]
-steps:
-    - uses: actions/checkout@v2
-      - name: Staring Node.js ${{ matrix.node-version }}
+        node-version:[17.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
