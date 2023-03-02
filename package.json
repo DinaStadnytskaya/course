@@ -84,10 +84,11 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.5",
+    "react-icons": "^4.7.1",
     "react-router-dom": "^6.2.1"
   },
   "loki": {
-      "configurations": {
+    "configurations": {
       "chrome.laptop": {
         "target": "chrome.docker",
         "width": 1366,

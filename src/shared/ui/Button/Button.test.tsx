@@ -3,9 +3,9 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 describe('Button', () => {
     test('Test render', () => {
-        // eslint-disable-next-line react/jsx-tag-spacing
         render(
-            <Button theme={ThemeButton.CLEAR || ThemeButton.RED || ThemeButton.OUTLINE}>
+            // eslint-disable-next-line max-len
+            <Button theme={ThemeButton.CLEAR || ThemeButton.BACKGROUND_INVERTED || ThemeButton.OUTLINE}>
                 TEST
 
             </Button>,

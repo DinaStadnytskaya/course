@@ -1,13 +1,14 @@
 {
   "Тестовый пример": "Test example",
-  "рус": "ru",
+  "русский": "english",
   "Главная страница": "Main page",
-  "O сайте": "About site",
+  "О сайте": "About site",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка":"An unexpected error has occurred",
   "Обновить страницу":"Refresh page",
  "ошибка":"mistake",
  "сайдбар":"sidebar",
  "главная": "main",
-"Про сайт":"About site"
+"Про сайт":"About site",
+"рус":"En"
 }

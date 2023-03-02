@@ -1,15 +1,12 @@
 .AppLink {
     text-decoration: none;
     padding: 6px 12px;
-    border-radius: 16px;
-    color: var(--inverted-primary-color);
-    border: 2px solid var(--inverted-primary-color);
-}
+    }
 
 .primary {
-    --inverted-primary-color: #001a67;
+      color: var(--primary-color);     
 }
 
 .secondary {
-    --inverted-primary-color: #848884;
+   color: var(--inverted-secondary-color); 
 }
