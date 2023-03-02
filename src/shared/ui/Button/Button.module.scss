@@ -9,18 +9,18 @@
     background: none;
     outline: none;
 }
+
 .red {
-    padding: 10px 20px ;
+    padding: 10px 20px;
     background-color: var(--inverted-primary-color);
     border-radius: 16px;
     font-size: var(--font-size-m);
-    color:var(--bg-color);
+    color: var(--bg-color);
 }
-.outline  {
-    padding:10px 15px;
-    border:2px solid var(--primary-color);
+
+.outline {
+    padding: 10px 15px;
+    border: 2px solid var(--primary-color);
     color: var(--primary-color);
     background: none;
-
-
 }
