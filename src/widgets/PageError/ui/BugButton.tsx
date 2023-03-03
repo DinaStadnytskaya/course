@@ -13,7 +13,7 @@ export const BugButton = () => {
     }, [error]);
     return (
         <div>
-            <Button type="button" onClick={onThrow} theme={ThemeButton.CLEAR}>
+            <Button type="button" onClick={onThrow} theme={ThemeButton.CLEAR_INVERTED}>
                 {t('ошибка')}
             </Button>
         </div>

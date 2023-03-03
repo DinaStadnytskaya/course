@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import React, { Suspense } from 'react';
 import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
