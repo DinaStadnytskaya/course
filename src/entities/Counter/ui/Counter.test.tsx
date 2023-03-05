@@ -14,7 +14,7 @@ describe('Counter', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
-        userEvent.click(screen.getByTestId('increment-btn'));
+        userEvent.click(screen.getByTestId('increment-button'));
         expect(screen.getByTestId('value-title')).toHaveTextContent('11');
     });
 
@@ -22,7 +22,7 @@ describe('Counter', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
-        userEvent.click(screen.getByTestId('decrement-btn'));
+        userEvent.click(screen.getByTestId('decrement-button'));
         expect(screen.getByTestId('value-title')).toHaveTextContent('9');
     });
 });
