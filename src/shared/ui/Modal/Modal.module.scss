@@ -1,4 +1,6 @@
 .Modal {
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -19,15 +21,12 @@
 }
 
 .content {
+    width: 400px;
+    height: 350px;
     padding: 20px;
     border-radius: 12px;
     color: var(--additional-color);
-    background-color: var(--inverted-additional-color);
-    transition: 0.3s transform;
-    transform: scale(0.5);
-    max-width: 40%;
-    min-width: 400px;
-    min-height: 200px;
+    background-color: var(--inverted-additional-color); 
     transition: all 0.3s linear;
     transform: scale(0.5);
     font-size: var(--font-size-l);

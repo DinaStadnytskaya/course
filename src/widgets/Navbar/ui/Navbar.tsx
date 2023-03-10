@@ -1,10 +1,11 @@
 /* eslint-disable i18next/no-literal-string */
 import { useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
+import { LoginModal } from 'features/AuthByUsername';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
-import { Modal } from 'shared/ui/Modal/Modal';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAuthUserData, userActions } from 'entities/User';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -13,28 +14,44 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
+    const dispatch = useDispatch();
     const [isAuthModal, setIsAuthModal] = useState(false);
-    const onToggleModal = useCallback(() => {
-        setIsAuthModal((prev) => !prev);
+    const authData = useSelector(getAuthUserData);
+    const onCloseModal = useCallback(() => {
+        setIsAuthModal(false);
     }, []);
-
+    const onOpenModal = useCallback(() => {
+        setIsAuthModal(true);
+    }, []);
+    const onLogOut = useCallback(
+        () => {
+            dispatch(userActions.logout());
+            onCloseModal();
+        },
+        [dispatch, onCloseModal],
+    );
+    if (authData) {
+        return (
+            <div className={classNames(cls.Navbar, {}, [className])}>
+                <Button theme={ThemeButton.CLEAR} size={SizeButton.L} onClick={onLogOut}>
+                    {t('выйти')}
+                </Button>
+            </div>
+        );
+    }
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
-            <Button
-                theme={ThemeButton.CLEAR}
-                size={SizeButton.L}
-                className={cls.links}
-                onClick={onToggleModal}
-            >
+            <Button theme={ThemeButton.CLEAR} size={SizeButton.L} onClick={onOpenModal}>
                 {t('войти')}
             </Button>
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                Lorem ipsum dolor
-                sit, amet consectetur adipisicing elit. Tempora earum, iure officia odio
-                veritatis quo atque assumenda harum vero, nihil quod eos quia quam.
-                Commodi nemo porro voluptas itaque eveniet!
+            {isAuthModal
+             && (
+                 <LoginModal
+                     isOpen={isAuthModal}
+                     onClose={onCloseModal}
+                 />
+             )}
 
-            </Modal>
         </div>
     );
 };

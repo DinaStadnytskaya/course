@@ -1,8 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useState } from 'react';
-import { ThemeSwitcher } from 'widgets/Themeswitcher';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 // import { useTranslation } from 'react-i18next';
-import { LangSwitcher } from 'widgets/Langswitcher';
+import { LangSwitcher } from 'widgets/LangSwitcher';
 import { useTranslation } from 'react-i18next';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';

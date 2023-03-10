@@ -1,5 +1,4 @@
 {
-  "Тестовый пример": "Test example",
   "русский": "english",
   "Главная страница": "Main page",
   "О сайте": "About site",
@@ -12,5 +11,13 @@
   "Про сайт": "About site",
   "рус": "En",
   "увеличить": "increase",
-  "уменьшить": "decrease"
+  "уменьшить": "decrease",
+  "ввести": "enter",
+  "войти": "log in",
+  "Введите имя": "Enter name",
+  "Введите пароль": "Enter password",
+  "Tакого пользователя не существует!":"Such user not found!",
+  "Форма авторизации!":"Authorization Form!",
+  "Вы ввели неверный пароль или логин!":"Your login or email is wrong!",
+  "выйти": "log out"
 }

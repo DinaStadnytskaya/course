@@ -76,3 +76,10 @@
 .size_xxl {
     font: var(--font-xxl);
 }
+.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.3;
+    filter: alpha(opacity=50);
+    box-shadow: none;
+}

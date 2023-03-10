@@ -8,7 +8,6 @@ interface LangSwitcherProps {
     short?: boolean;
 }
 
-// eslint-disable-next-line no-unused-vars
 export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
     const { t, i18n } = useTranslation();
     const toggleLang = () => {
@@ -16,7 +15,7 @@ export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
     };
     return (
         <Button
-            className={classNames(cls.LangSwitcher, {}, [])}
+            className={classNames(cls.LangSwitcher, {}, [className])}
             onClick={toggleLang}
             theme={ThemeButton.CLEAR}
         >

@@ -1,13 +1,15 @@
-import React from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BugButton } from 'widgets/PageError';
-import { Counter } from 'entities/Counter';
 
 const MainPage = () => {
     const { t } = useTranslation();
+    const [value, setValue] = useState('');
+    const onChange = (val:string) => {
+        setValue(val);
+    };
     return (
         <div>
-            <Counter />
             <BugButton />
             {t('Главная страница')}
         </div>
