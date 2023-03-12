@@ -1,3 +1,3 @@
-import * as ThemeSwitcher from './ui/ThemeSwitcher';
+import ThemeSwitcher from './ui/ThemeSwitcher';
 
-export default ThemeSwitcher;
+export { ThemeSwitcher };

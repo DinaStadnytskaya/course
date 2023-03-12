@@ -8,7 +8,7 @@ interface LangSwitcherProps {
     short?: boolean;
 }
 
-export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
+const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
     const { t, i18n } = useTranslation();
     const toggleLang = () => {
         i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
@@ -24,3 +24,4 @@ export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
 
     );
 };
+export default LangSwitcher;
