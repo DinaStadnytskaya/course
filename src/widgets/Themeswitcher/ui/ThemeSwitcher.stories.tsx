@@ -5,13 +5,14 @@ import { Theme } from 'app/providers/Theme';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
 export default {
-    title: 'shared/ThemeSwitcher',
+    title: 'widget/ThemeSwitcher',
     component: ThemeSwitcher,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof ThemeSwitcher>;
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
 
 export const Normal = Template.bind({});
