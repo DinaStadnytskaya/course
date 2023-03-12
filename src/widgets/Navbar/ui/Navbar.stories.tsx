@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecr/ThemeDecorator';
 import { Theme } from 'app/providers/Theme';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecr/StoreDecorator';
 import { Navbar } from './Navbar';
 
 export default {
