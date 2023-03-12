@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
@@ -12,7 +13,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
         chunkFilename: 'css/[name].[contenthash:8].css',
     }), new webpack.DefinePlugin({
         __IS_DEV__: JSON.stringify(isDev),
-    })];
+    }), new CaseSensitivePathsPlugin()];
     if (isDev) {
         plugins.push(
             new webpack.HotModuleReplacementPlugin(),
