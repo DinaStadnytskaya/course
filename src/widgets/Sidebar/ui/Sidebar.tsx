@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
 import { BsJournalRichtext, BsHouseFill } from 'react-icons/bs';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import ThemeSwitcher from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import cls from './Sidebar.module.scss';
@@ -50,7 +50,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 </AppLink>
             </div>
             <div className={cls.switchers}>
-                <ThemeSwitcher />
+                {/* {ThemeSwitcher} */}
                 <LangSwitcher short={collapsed} />
             </div>
         </div>
