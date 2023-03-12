@@ -26,7 +26,10 @@ module.exports = {
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
-        // 'linebreak-style': ['error', 'windows'],
+        'import/no-unresolved': [
+            2,
+            { caseSensitive: false },
+        ],
         'linebreak-style': 0,
         indent: [2, 4],
         'react/jsx-filename-extension': [
