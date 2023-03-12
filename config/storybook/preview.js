@@ -1,4 +1,3 @@
-import React from 'react';
 import { addDecorator } from '@storybook/react';
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
