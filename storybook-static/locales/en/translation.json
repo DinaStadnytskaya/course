@@ -1,0 +1,23 @@
+{
+  "русский": "english",
+  "Главная страница": "Main page",
+  "О сайте": "About site",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "An unexpected error has occurred",
+  "Обновить страницу": "Refresh page",
+  "ошибка": "mistake",
+  "сайдбар": "sidebar",
+  "главная": "main",
+  "Про сайт": "About site",
+  "рус": "en",  
+  "увеличить": "increase",
+  "уменьшить": "decrease",
+  "ввести": "enter",
+  "войти": "log in",
+  "Введите имя": "Enter name",
+  "Введите пароль": "Enter password",
+  "Tакого пользователя не существует!":"Such user not found!",
+  "Форма авторизации!":"Authorization Form!",
+  "Вы ввели неверный пароль или логин!":"Your login or email is wrong!",
+  "выйти": "log out"
+}

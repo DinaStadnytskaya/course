@@ -19,8 +19,8 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, {rej
             localStorage.setItem(USER_LOCALESTORAGE_KEY, JSON.stringify(response.data));
             thunkAPI.dispatch(userActions.setAuthData(response.data));
             return response.data;
-        } catch (err) {
-            return thunkAPI.rejectWithValue(err);
+        } catch (error) {
+            return thunkAPI.rejectWithValue('error');
         }
     },
 );
