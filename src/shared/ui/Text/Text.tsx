@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
 
@@ -16,7 +18,7 @@ interface TextProps {
   text?: string;
   theme?:TextTheme;
 }
-export const Text = (props: TextProps) => {
+export const Text = memo((props: TextProps) => {
     const {
         className, title, text, theme = TextTheme.PRIMARY,
     } = props;
@@ -35,4 +37,4 @@ export const Text = (props: TextProps) => {
             )}
         </div>
     );
-};
+});

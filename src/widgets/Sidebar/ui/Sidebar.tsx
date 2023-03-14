@@ -1,27 +1,25 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { memo, useState } from 'react';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
-import { BsJournalRichtext, BsHouseFill } from 'react-icons/bs';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
+import { SidebarItemList } from '../model/items';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
 }
-
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
-    const { t } = useTranslation();
     const toggle = () => {
         setCollapsed((prev) => !prev);
     };
     return (
-        // eslint-disable-next-line max-len
-        <div data-testid="sidebar" className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
+        <div
+            data-testid="sidebar"
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+        >
             <Button
                 data-testid="sidebar-btn"
                 type="button"
@@ -34,20 +32,14 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 {collapsed ? '>' : '<'}
 
             </Button>
-            <div className={cls.items}>
-                <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.main}>
-                    <BsHouseFill className={cls.icon} />
-
-                    <span className={cls.link}>
-                        {t('главная')}
-                    </span>
-                </AppLink>
-                <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about}>
-                    <BsJournalRichtext className={cls.icon} />
-                    <span className={cls.link}>
-                        {t('О сайте')}
-                    </span>
-                </AppLink>
+            <div className={cls.Items}>
+                {SidebarItemList.map((item) => (
+                    <SidebarItem
+                        key={item.path}
+                        item={item}
+                        collapsed={collapsed}
+                    />
+                ))}
             </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
@@ -55,4 +47,4 @@ export const Sidebar = ({ className }: SidebarProps) => {
             </div>
         </div>
     );
-};
+});
