@@ -20,7 +20,7 @@ i18n
         },
         react: {
         // wait: true,
-            useSuspense: false,
+            useSuspense: true,
         },
     });
 
