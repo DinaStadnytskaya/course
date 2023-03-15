@@ -3,9 +3,10 @@ import { memo, useState } from 'react';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import { SidebarItem } from '../SidebarItem/SidebarItem';
-import { SidebarItemList } from '../model/items';
+
+import { SidebarItemList } from '../../model/items';
 import cls from './Sidebar.module.scss';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 
 interface SidebarProps {
     className?: string;
