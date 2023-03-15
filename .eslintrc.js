@@ -25,7 +25,7 @@ module.exports = {
     ],
     rules: {
         'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],     
+        'react/jsx-indent-props': [2, 4],
         'linebreak-style': 0,
         indent: [2, 4],
         'react/jsx-filename-extension': [
@@ -59,6 +59,7 @@ module.exports = {
     },
     globals: {
         __IS_DEV__: true,
+        __API__: true,
     },
     overrides: [
         {
