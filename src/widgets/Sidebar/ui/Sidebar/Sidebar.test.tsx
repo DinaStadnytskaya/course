@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { Sidebar } from 'widgets/Sidebar';
 import { componentRender } from 'shared/lib/componentrender/componentRender';
+import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';
 
 describe('Sidebar', () => {
     test('with only first param', () => {
