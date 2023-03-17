@@ -1,7 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useState } from 'react';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
-
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { SidebarItemList } from '../../model/items';
@@ -11,7 +10,7 @@ import { SidebarItem } from '../SidebarItem/SidebarItem';
 interface SidebarProps {
     className?: string;
 }
-export const Sidebar = memo(({ className }: SidebarProps) => {
+const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
     const toggle = () => {
         setCollapsed((prev) => !prev);
@@ -49,3 +48,4 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         </div>
     );
 });
+export default Sidebar;
