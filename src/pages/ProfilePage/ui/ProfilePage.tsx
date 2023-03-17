@@ -2,16 +2,22 @@ import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList }
     from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { fetchProfileData, ProfileCard, profileReducer } from 'entities/Profile';
-import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import cls from './ProfilePage.module.scss';
 
-const reducers : ReducersList = {
+const initialReducers: ReducersList = {
     profile: profileReducer,
 };
 
-const ProfilePage = () => {
+interface ProfilePageProps {
+    className?: string;
+}
+
+const ProfilePage = ({ className }: ProfilePageProps) => {
     const { t } = useTranslation();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     useEffect(
         () => {
@@ -20,8 +26,10 @@ const ProfilePage = () => {
         [dispatch],
     );
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <ProfileCard />
+        <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
+            <div className={classNames(cls.ProfilePage, {}, [className])}>
+                <ProfileCard />
+            </div>
         </DynamicModuleLoader>
     );
 };

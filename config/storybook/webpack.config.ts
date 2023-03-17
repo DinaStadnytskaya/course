@@ -10,7 +10,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
     };
-    config!.resolve!.module!.unshift(paths.src);
+    config!.resolve!.modules!.unshift(paths.src);
     // config.resolve.modules.push(paths.src);
     // config.resolve.modules = [paths.src, 'node_modules'];
     // config.resolve.modules = [path.resolve(__dirname, '../../src'), 'node_modules'];

@@ -1,21 +1,22 @@
-import React, { Suspense, useEffect } from 'react';
-import './styles/index.scss';
+import { Suspense, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTheme } from 'app/providers/Theme';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { useDispatch } from 'react-redux';
-import { userActions } from '../entities/User';
+import { userActions } from 'entities/User';
+import { useTheme } from 'app/providers/Theme';
 
-const App = () => {
+function App() {
     const { theme } = useTheme();
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(userActions.initAuthData());
     }, [dispatch]);
+
     return (
-        <div className={classNames('app', { hovered: true }, [theme])}>
+        <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">
@@ -25,6 +26,6 @@ const App = () => {
             </Suspense>
         </div>
     );
-};
+}
 
 export default App;

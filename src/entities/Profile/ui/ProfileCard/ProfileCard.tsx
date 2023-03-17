@@ -23,13 +23,13 @@ export const ProfileCard = (props: ProfileCardProps) => {
         <div className={classNames(cls.ProfileCard, {}, [className])}>
             <div className={cls.header}>
                 <Text title={t('профиль')} />
-                <Button theme={ThemeButton.OUTLINE} className={cls.editBtn}>
+                <Button theme={ThemeButton.OUTLINE_INVERTED} className={cls.editBtn}>
                     {t('редактировать')}
                 </Button>
             </div>
             <div className={cls.content}>
-                <Input value={data?.firstname} placeholder={t('Ваше имя')} />
-                <Input value={data?.lastname} placeholder={t('Ваша фамилия')} />
+                <Input placeholder={t('Ваше имя')} />
+                <Input placeholder={t('Ваша фамилия')} />
             </div>
         </div>
     );

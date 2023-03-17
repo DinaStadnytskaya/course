@@ -30,14 +30,5 @@
       "id": "2"
     }
   ],
-  "profile": {
-    "firstname": "Diane",
-    "lastname": "Di",
-    "age": "35",
-    "currency": "EUR",
-    "country": "Ukraine",
-    "city": "Odessa",
-    "username": "admin",
-    "avatar": "https://pibig.info/uploads/posts/2022-11/1668754383_28-pibig-info-p-legkie-arti-vkontakte-28.jpg"
-  }
+  "profile": {}
 }

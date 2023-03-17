@@ -13,12 +13,14 @@ export default {
     },
 } as ComponentMeta<typeof ProfilePage>;
 
-// eslint-disable-next-line react/jsx-props-no-spreading
-const Template: ComponentStory<typeof ProfilePage> = () => <ProfilePage />;
+const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [StoreDecorator({})];
+Normal.decorators = [
+    StoreDecorator({}),
+];
+
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
