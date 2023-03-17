@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import {
     AnyAction,
-    CombinedState,
     EnhancedStore,
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit';
+import { CombinedState, Dispatch } from 'redux';
 import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';

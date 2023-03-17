@@ -8,24 +8,26 @@ interface LoginByUsernameProps {
    password: string;
 }
 
-export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps,
-    ThunkConfig<string>>(
-        'login/loginByUsername',
-        async (authData, thunkApi) => {
-            const { extra, dispatch, rejectWithValue } = thunkApi;
-            try {
-                const response = await extra.api.post<User>('/login', authData);
-                if (!response.data) {
-                    throw new Error('Login failed');
-                }
-                localStorage.setItem(USER_LOCALESTORAGE_KEY, JSON.stringify(response.data));
-                dispatch(userActions.setAuthData(response.data));
-                extra.navigate('/about');
-                return response.data;
-            } catch (error) {
-                // eslint-disable-next-line no-console
-                console.log(error);
-                return rejectWithValue('error');
+export const loginByUsername = createAsyncThunk<
+    User,
+    LoginByUsernameProps,
+    ThunkConfig<string>
+>(
+    'login/loginByUsername',
+    async (authData, thunkApi) => {
+        const { extra, dispatch, rejectWithValue } = thunkApi;
+        try {
+            const response = await extra.api.post<User>('/login', authData);
+            if (!response.data) {
+                throw new Error('Login failed');
             }
-        },
-    );
+            localStorage.setItem(USER_LOCALESTORAGE_KEY, JSON.stringify(response.data));
+            dispatch(userActions.setAuthData(response.data));
+            return response.data;
+        } catch (error) {
+            // eslint-disable-next-line no-console
+            console.log(error);
+            return rejectWithValue('error');
+        }
+    },
+);

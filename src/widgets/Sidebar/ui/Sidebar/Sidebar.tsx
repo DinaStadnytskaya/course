@@ -1,11 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useState } from 'react';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
+
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { LangSwitcher } from 'widgets/LangSwitcher';
 import { SidebarItemList } from '../../model/items';
 import cls from './Sidebar.module.scss';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
-import { ThemeSwitcher } from '../../../ThemeSwitcher';
-import { LangSwitcher } from '../../../LangSwitcher';
 
 interface SidebarProps {
     className?: string;
