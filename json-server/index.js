@@ -56,3 +56,14 @@ server.listen(8000, () => {
     // eslint-disable-next-line no-console
     console.log('server is running on 8000 port');
 });
+
+// {
+//   "firstname": "Diane",
+//   "lastname": "Di",
+//   "age": "32",
+//   "country": "Ukraine",
+//   "currency": "USD",
+//   "city": "Odessa",
+//   "username": "Denah",
+//   "avatar": "./public/assets/profile1.png"
+// }

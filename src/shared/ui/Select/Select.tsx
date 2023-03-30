@@ -1,0 +1,69 @@
+/* eslint-disable no-unused-vars */
+import { ChangeEvent, memo, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import cls from './Select.module.scss';
+
+export interface SelectOption {
+    value: string;
+    content: string;
+}
+
+interface SelectProps {
+    className?: string;
+    label?: string;
+    options?: SelectOption[];
+    value?: string;
+    onChange?: (value: string) => void;
+    readonly?: boolean;
+}
+export const Select = memo((props: SelectProps) => {
+    const {
+        className,
+        label,
+        options,
+        onChange,
+        value,
+        readonly,
+    } = props;
+    const { t } = useTranslation();
+    const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+        if (onChange) {
+            onChange(e.target.value);
+        }
+    };
+
+    const optionsList = useMemo(() => options?.map((opt) => (
+        <option
+            className={cls.Option}
+            value={opt.value}
+            key={opt.value}
+        >
+            {opt.content}
+        </option>
+    )), [options]);
+
+    const mods: Mods = {};
+    return (
+        <div className={classNames(cls.SelectWrapper, mods, [
+            className,
+        ])}
+        >
+            <div className={cls.LabelWrapper}>
+                {label && (
+                    <span className={cls.Label}>
+                        {`${label}>`}
+                    </span>
+                )}
+            </div>
+            <select
+                disabled={readonly}
+                className={cls.Select}
+                value={value}
+                onChange={onChangeHandler}
+            >
+                {optionsList}
+            </select>
+        </div>
+    );
+});

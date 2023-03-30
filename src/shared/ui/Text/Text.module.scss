@@ -1,27 +1,39 @@
 .title {
-    font-size: var(--font-size-xl);
+  font-size: var(--font-size-xl);
+  line-height: 140%;
 }
 
 .text {
-    font-size: var(--font-size-m);
+  font-size: var(--font-size-m);
+  line-height: 140%;
 }
 
 .primary {
-    .title {
-        color: var(--additional-color);
-    }
+  .title {
+    color: var(--additional-color);
+  }
 
-    .text {
-        color: var(--primary-color);
-    }
+  .text {
+    color: var(--primary-color);
+  }
 }
 
 .error {
-    .title {
-        color: var(--text-color);
-    }
+  .title {
+    color: var(--text-color);
+  }
 
-    .text {
-        color: var(--additional-text-color);
-    }
+  .text {
+    color: var(--additional-text-color);
+  }
+}
+
+.left {
+  text-align: left;
+}
+.right {
+  text-align: center;
+}
+.center {
+  text-align: center;
 }

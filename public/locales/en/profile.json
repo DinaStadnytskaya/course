@@ -1,7 +1,19 @@
 {
-  "Ваша фамилия": "",
-  "Ваше имя": "",
+  "Ваш возраст": "Your age",
+  "Ваша фамилия": "Your surname",
+  "Ваше имя": "Your name",
+  "Введите имя пользователя": "Enter username",
+  "Введите ссылку на аватар": "Enter link to avatar",
+  "Город": "City",
+  "Обновите страницу!": "Refresh page!",
+  "Произошла ошибка при загрузке профиля!": "An error occurred while loading the profile!",
+  "Профиль": "Profile",
+  "Укажите ": "",
+  "Укажите валюту": "Choose currency",
+  "Укажите страну": "Choose country",
+  "отменить": "cancel",
   "привет": "hello",
   "профиль": "profile",
-  "редактировать": "edit"
+  "редактировать": "edit",
+  "сохранить": "save"
 }
