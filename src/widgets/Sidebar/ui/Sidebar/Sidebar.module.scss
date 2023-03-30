@@ -1,45 +1,45 @@
 .Sidebar {
-  height: calc(100vh - var(--navbar-height));
-  width: var(--sidebar-width);
-  background-color: var(--inverted-bg-color);
-  position: relative;
-  transition: all 0.4s linear;
+    height: calc(100vh - var(--navbar-height));
+    width: var(--sidebar-width);
+    background-color: var(--inverted-bg-color);
+    position: relative;
+    transition: all 0.4s linear;
 }
 
 .switchers {
-  position: absolute;
-  bottom: 40px;
-  left: 46%;
-  display: flex;
-  justify-content: center;
-  column-gap: 10px;
-  transition: all 0.3s linear;
-  transform: translateX(-50%);
+    position: absolute;
+    bottom: 40px;
+    left: 46%;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    transition: all 0.3s linear;
+    transform: translateX(-50%);
 }
 
 .collapseBtn {
-  position: absolute;
-  z-index: 5;
-  right: -48px;
-  bottom: 40px;
-  width: 50px;
-  height: 50px;
+    position: absolute;
+    z-index: 5;
+    right: -48px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .Items {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 15px;
-  white-space: nowrap;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+    white-space: nowrap;
 }
 
 .collapsed {
-  width: var(--sidebar-width-collapsed);
+    width: var(--sidebar-width-collapsed);
 
-  .switchers {
-    flex-direction: column;
-    align-items: center;
-  }
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+    }
 }

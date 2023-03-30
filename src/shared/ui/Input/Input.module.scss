@@ -1,62 +1,65 @@
 .InputWrapper {
-  display: flex;
-  width: 100%;
-  padding: 0px;
-  color: var(--additional-color);
+    display: flex;
+    width: 100%;
+    padding: 0;
+    color: var(--additional-color);
 }
 
 .placeholder {
-  width: auto;
-  white-space: nowrap;
-  font-size: var(--font-size-l);
+    width: auto;
+    white-space: nowrap;
+    font-size: var(--font-size-l);
 }
 
 .input {
-  width: 100%;
-  padding-left: 5px;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: transparent;
-  text-shadow: 0 0 0 var(--additional-color);
-  white-space: wrap;
-  font-size: var(--font-size-l);
-  &:focus {
+    width: 100%;
+    padding-left: 5px;
+    background: transparent;
     border: none;
     outline: none;
-  }
+    color: transparent;
+    text-shadow: 0 0 0 var(--additional-color);
+    white-space: wrap;
+    font-size: var(--font-size-l);
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
 }
 
 .caretWrapper {
-  flex-grow: 1;
-  margin-left: auto;
-  overflow: hidden;
-  position: relative;
-  padding: 0px;
+    flex-grow: 1;
+    margin-left: auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
 }
 
 .caret {
-  height: 3px;
-  width: 9px;
-  position: absolute;
-  background-color: var(--additional-color);
-  bottom: 0;
-  left: 5px;
-  animation: blink 0.7s forwards infinite;
+    height: 3px;
+    width: 9px;
+    position: absolute;
+    background-color: var(--additional-color);
+    bottom: 0;
+    left: 5px;
+    animation: blink 0.7s forwards infinite;
 }
+
 .readonly {
-  opacity: 0.7;
+    opacity: 0.7;
 }
+
 @keyframes blink {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  50% {
-    opacity: 0.01;
-  }
+    50% {
+        opacity: 0.01;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }

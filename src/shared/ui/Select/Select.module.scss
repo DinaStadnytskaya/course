@@ -1,27 +1,31 @@
 .SelectWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  column-gap: 10px;
-  width: 100%;
-  .LabelWrapper {
-    min-width: 150px;
-  }
-  .Label {
-    font-size: var(--font-size-l);
-    color: var(--additional-color);
-  }
-  .Select {
-    background: none;
-    outline: none;
-    color: var(--additional-color);
-    padding: 2px 10px 2px 2px;
-    border: 2px solid var(--additional-color);
-    font-size: var(--font-size-l);
-  }
-  .Option {
-    background: var(--inverted-bg-color);
-    font-size: var(--font-size-l);
-    color: var(--additional-color);
-  }
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+    width: 100%;
+
+    .LabelWrapper {
+        min-width: 150px;
+    }
+
+    .Label {
+        font-size: var(--font-size-l);
+        color: var(--additional-color);
+    }
+
+    .Select {
+        background: none;
+        outline: none;
+        color: var(--additional-color);
+        padding: 2px 10px 2px 2px;
+        border: 2px solid var(--additional-color);
+        font-size: var(--font-size-l);
+    }
+
+    .Option {
+        background: var(--inverted-bg-color);
+        font-size: var(--font-size-l);
+        color: var(--additional-color);
+    }
 }
