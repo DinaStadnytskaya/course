@@ -2,19 +2,20 @@
 @import "./variables/global";
 @import "./themes/normal";
 @import "./themes/dark";
+@import "./themes/home";
 
 .app {
-    min-height: 100vh;
-    background-color: var(--bg-color);
-    font: var(--font-m);
-    color: var(--primary-color);
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font: var(--font-m);
+  color: var(--primary-color);
 }
 
 .content-page {
-    display: flex;
+  display: flex;
 }
 
 .page-wrapper {
-    flex-grow: 1;
-    padding: 20px;
+  flex-grow: 1;
+  padding: 20px;
 }

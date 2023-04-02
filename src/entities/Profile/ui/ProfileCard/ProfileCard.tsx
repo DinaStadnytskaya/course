@@ -1,6 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable i18next/no-literal-string */
-/* eslint-disable react/jsx-no-comment-textnodes */
 import { useTranslation } from 'react-i18next';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';

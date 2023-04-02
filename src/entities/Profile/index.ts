@@ -1,6 +1,7 @@
 export {
     Profile,
     ProfileSchema,
+    ValidateProfileError,
 } from './model/types/profile';
 
 export {
@@ -37,3 +38,7 @@ export {
 export {
     updateProfileData,
 } from './model/services/updateProfileData/updateProfileData';
+
+export {
+    getProfileValidateErrors,
+} from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
