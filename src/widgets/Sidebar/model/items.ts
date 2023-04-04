@@ -1,6 +1,10 @@
 import { IconType } from 'react-icons/lib';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { BsJournalRichtext, BsHouseFill, BsPersonCircle } from 'react-icons/bs';
+import { BsJournalRichtext } from 'react-icons/bs';
+import { SiHomebridge } from 'react-icons/si';
+import { GiCaptainHatProfile } from 'react-icons/gi';
+import { MdNotes } from 'react-icons/md';
+import { VscSaveAs } from 'react-icons/vsc';
 
 export interface SidebarItemType {
     path: string;
@@ -13,7 +17,7 @@ export const SidebarItemList: SidebarItemType[] = [
     {
         path: RoutePath.main,
         text: 'Главная страница',
-        Icon: BsHouseFill,
+        Icon: SiHomebridge,
     },
     {
         path: RoutePath.about,
@@ -23,7 +27,18 @@ export const SidebarItemList: SidebarItemType[] = [
     {
         path: RoutePath.profile,
         text: 'Страница профиля',
-        Icon: BsPersonCircle,
+        Icon: GiCaptainHatProfile,
         authOnly: true,
     },
+    {
+        path: RoutePath.articles,
+        text: 'Статьи',
+        Icon: MdNotes,
+        authOnly: true,
+    },
+    // {
+    //     path: RoutePath.article_details,
+    //     text: 'Страница статьи',
+    //     Icon: VscSaveAs,
+    // },
 ];

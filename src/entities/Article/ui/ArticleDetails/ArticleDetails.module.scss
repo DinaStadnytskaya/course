@@ -1,0 +1,17 @@
+.ArticleDetails {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+}
+.SceletonWrapper {
+    width: 100%;
+}
+.CircleSceleton {
+  margin: 0 auto 20px;
+  align-self: center;
+}
+.SquareSceleton:not(:last-child) {
+  margin-bottom: 20px;
+}

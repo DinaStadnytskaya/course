@@ -1,13 +1,18 @@
 :root,
 .app_dark_theme {
-    --bg-color: #a0b1de;
-    --inverted-bg-color: #fdd3d9;
-    --primary-color: #fcfdfd;
-    --inverted-primary-color: #767892;
-    --secondary-color: #d3fdf7;
-    --inverted-secondary-color: #00bcd4;
-    --additional-color: #6c6b57;
-    --inverted-additional-color: #decda0;
-    --text-color: #ff4081;
-    --additional-text-color: #ea80fc;
+  --bg-color: #a0b1de;
+  --inverted-bg-color: #fdd3d9;
+  --primary-color: #fcfdfd;
+  --inverted-primary-color: #767892;
+  --secondary-color: #d3fdf7;
+  --inverted-secondary-color: #00bcd4;
+  --additional-color: #6c6b57;
+  --inverted-additional-color: #decda0;
+  --text-color: #ff4081;
+  --additional-text-color: #ea80fc;
+  --icon-color: #a0b1de;
+
+  // skeleton
+  --skeleton-color: #7a8fc9;
+  --skeleton-shadow: #7a8fc9;
 }

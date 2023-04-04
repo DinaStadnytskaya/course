@@ -16,7 +16,7 @@ import {
     profileReducer,
     ValidateProfileError,
 } from 'entities/Profile';
-import { useCallback, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import Profile from 'shared/assets/profile1.png';
@@ -129,4 +129,4 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     );
 };
 
-export default ProfilePage;
+export default memo(ProfilePage);

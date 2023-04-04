@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BugButton } from 'widgets/PageError';
 
@@ -11,4 +12,4 @@ const MainPage = () => {
     );
 };
 
-export default MainPage;
+export default memo(MainPage);
