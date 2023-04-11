@@ -1,17 +1,24 @@
 :root,
 .app_home_theme {
-  --bg-color: #00b4d8;
-  --inverted-bg-color: #caf0f8;
-  --primary-color: #c1eaff;
-  --inverted-primary-color: #00a6fb;
-  --secondary-color: #ef96ff;
-  --inverted-secondary-color: #a928f5;
-  --additional-color: #06677a;
-  --inverted-additional-color: #d2e6eb;
-  --text-color: #ff4081;
-  --additional-text-color: #902549;
-  --icon-color: #00b4d8;
-  // skeleton
-  --skeleton-color: #fff;
-  --skeleton-shadow: rgba(0 0 0 / 20%);
+    --bg-color: #00b4d8;
+    --inverted-bg-color: #caf0f8;
+    --primary-color: #c1eaff;
+    --inverted-primary-color: #00a6fb;
+    --secondary-color: #a928f5;
+    --inverted-secondary-color: #ef96ff;
+    --additional-color: #06677a;
+    --inverted-additional-color: #d2e6eb;
+    --text-color: #ff4081;
+    --additional-text-color: #902549;
+    --icon-color: #00b4d8;
+    --applink-color: #d202f7;
+    --code-bg: #fcfdfd;
+    --input-color: #0090d8;
+    // skeleton
+    --skeleton-color: #fff;
+    --skeleton-shadow: rgba(0 0 0 / 20%);
+
+    --card-bg:
 }
+
+// Chargeback@privatbank.ua,

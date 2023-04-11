@@ -1,23 +1,35 @@
 .ProfilePage {
-  width: 100%;
-  height: 100%;
-  position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.ProfilePageBackground {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
 }
 
 .ProfileWrapper {
-  padding: 0;
-  height: 100%;
-  width: 474px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 60px;
-  position: relative;
-  .ErrorBlock {
-    width: auto;
-    position: absolute;
-    bottom: 30px;
-    margin: 0 auto;
-  }
+    padding: 0;
+    height: 100%;
+    width: 474px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 60px;
+    position: relative;
+
+    .ErrorBlock {
+        width: auto;
+        position: absolute;
+        bottom: 30px;
+        margin: 0 auto;
+    }
 }

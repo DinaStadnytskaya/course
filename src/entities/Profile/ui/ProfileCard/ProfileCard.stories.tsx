@@ -7,7 +7,7 @@ import { Currency } from 'entities/Currency';
 import avatar from './profile.jpg';
 
 export default {
-    title: 'entities/ProfileCard',
+    title: 'entities/Profile/ProfileCard',
     component: ProfileCard,
     argTypes: {
         backgroundColor: { control: 'color' },

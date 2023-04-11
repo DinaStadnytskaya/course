@@ -1,18 +1,22 @@
 :root,
 .app_light_theme {
-  --bg-color: #fdd3d9;
-  --inverted-bg-color: #a0b1de;
-  --primary-color: #767892;
-  --inverted-primary-color: #fcfdfd;
-  --secondary-color: #00bcd4;
-  --inverted-secondary-color: #d3fdf7;
-  --additional-color: #decda0;
-  --inverted-additional-color: #6c6b57;
-  --text-color: #ad1457;
-  --additional-text-color: #ba68c8;
-  --icon-color: #fdd3d9;
+    --bg-color: #fdd3d9;
+    --inverted-bg-color: #a0b1de;
+    --primary-color: #767892;
+    --inverted-primary-color: #ebecfa;
+    --secondary-color: #d3fdf7;
+    --inverted-secondary-color: #00bcd4;
+    --additional-color: #decda0;
+    --inverted-additional-color: #6c6b57;
+    --text-color: #ad1457;
+    --additional-text-color: #ba68c8;
+    --icon-color: #fdd3d9;
+    --applink-color: #d3fdf7;
+    --code-bg: #767892;
+    --input-color: #fff;
+    // skeleton
+    --skeleton-color: #fff;
+    --skeleton-shadow: rgba(0 0 0 / 20%);
 
-  // skeleton
-  --skeleton-color: #fff;
-  --skeleton-shadow: rgba(0 0 0 / 20%);
+    --card-bg:
 }

@@ -1,24 +1,33 @@
 .ProfilePageHeader {
-  width: 474px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-  .Title {
-    margin-bottom: 30px;
-  }
-  .editBtn {
-    padding: 3px 20px;
-    height: 40px;   
-  }
-  .saveBtn {
-    padding: 3px 10px;
-    height: 40px;
-  }
-  .ButtonsBlock {
+    width: 474px;
+    height: auto;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 50px;
-  }
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .Title {
+        margin-bottom: 60px;
+    }
+
+    .editBtn {
+        padding: 3px 20px;
+        height: 40px;
+    }
+
+    .saveBtn {
+        padding: 3px 10px;
+        height: 40px;
+    }
+
+    .ButtonsBlock {
+        display: flex;
+        align-items: center;
+        column-gap: 50px;
+        margin-right: auto;
+    }
+
+    .ButtonsWrapper {
+        position: relative;
+        top: 100px;
+    }
 }

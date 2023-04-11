@@ -11,21 +11,21 @@
 
     .Label {
         font-size: var(--font-size-l);
-        color: var(--additional-color);
+        color: var(--input-color);
     }
 
     .Select {
         background: none;
         outline: none;
-        color: var(--additional-color);
+        color: var(--input-color);
         padding: 2px 10px 2px 2px;
-        border: 2px solid var(--additional-color);
+        border: 2px solid var(--input-color);
         font-size: var(--font-size-l);
     }
 
     .Option {
         background: var(--inverted-bg-color);
         font-size: var(--font-size-l);
-        color: var(--additional-color);
+        color: var(--input-color);
     }
 }

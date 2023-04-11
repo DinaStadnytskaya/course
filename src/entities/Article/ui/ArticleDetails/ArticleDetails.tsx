@@ -1,14 +1,20 @@
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable i18next/no-literal-string */
-import { memo, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from
     'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextAlign } from 'shared/ui/Text/Text';
+import {
+    Text, TextAlign, TextSize, TextTheme,
+} from 'shared/ui/Text/Text';
 import { Skeleton } from 'shared/ui/Skeleton';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { ImEye } from 'react-icons/im';
+import { FcCalendar } from 'react-icons/fc';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
@@ -16,6 +22,11 @@ import {
 } from '../../model/selectors/articleDetails';
 import { fetchArticleById } from '../../model/services/fetchArticleById';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent }
+    from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleDetails.module.scss';
 
 interface ArticleDetailsProps {
@@ -29,16 +40,39 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     const { t } = useTranslation('articledetails');
     const { className, id } = props;
     const dispatch = useAppDispatch();
-    // const isLoading = useSelector(getArticleDetailsIsLoading);
-    const isLoading = true;
+    const isLoading = useSelector(getArticleDetailsIsLoading);
     const article = useSelector(getArticleDetailsData);
     const error = useSelector(getArticleDetailsError);
-
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchArticleById(id));
+    const renderBlock = useCallback((block:ArticleBlock) => {
+        switch (block.type) {
+        case ArticleBlockType.CODE:
+            return (
+                <ArticleCodeBlockComponent
+                    key={block.id}
+                    block={block}
+                />
+            );
+        case ArticleBlockType.IMAGE:
+            return (
+                <ArticleImageBlockComponent
+                    key={block.id}
+                    block={block}
+                />
+            );
+        case ArticleBlockType.TEXT:
+            return (
+                <ArticleTextBlockComponent
+                    key={block.id}
+                    block={block}
+                />
+            );
+        default:
+            return null;
         }
-    }, [dispatch, id]);
+    }, []);
+    useInitialEffect(() => {
+        dispatch(fetchArticleById(id));
+    });
 
     let content;
     if (isLoading) {
@@ -54,15 +88,50 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     } else if (error) {
         content = (
             <Text
+                theme={TextTheme.ERROR}
                 align={TextAlign.CENTER}
                 title={t('Произошла ошибка при загрузке статьи')}
             />
         );
     } else {
         content = (
-            <div>
-                <img src={article?.img} alt="hello" style={{ width: '640px', height: '400px' }} />
-            </div>
+            <>
+                <div className={cls.ArticleDetailsAvatarWrapper}>
+                    <Avatar
+                        className={cls.ArticleDetailsAvatar}
+                        src={article?.img}
+                        alt={article?.img}
+                        size={240}
+                    />
+                </div>
+                <Text
+                    className={cls.ArticleDetailsText}
+                    theme={TextTheme.PRIMARY}
+                    title={article?.title}
+                    text={article?.subtitle}
+                    align={TextAlign.LEFT}
+                    size={TextSize.XL}
+                />
+                <div className={cls.TextWrapper}>
+                    <ImEye />
+                    <Text
+                        theme={TextTheme.PRIMARY}
+                        align={TextAlign.LEFT}
+                        text={String(article?.views)}
+                        size={TextSize.M}
+                    />
+                </div>
+                <div className={cls.TextWrapper}>
+                    <FcCalendar />
+                    <Text
+                        theme={TextTheme.PRIMARY}
+                        align={TextAlign.LEFT}
+                        text={article?.createdAt}
+                        size={TextSize.M}
+                    />
+                </div>
+                {article?.blocks.map(renderBlock)}
+            </>
         );
     }
 

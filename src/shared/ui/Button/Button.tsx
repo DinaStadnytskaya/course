@@ -13,7 +13,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     children?: ReactNode;
 }
 export enum ThemeButton {
-    CLEAR='clear',
+    CLEAR = 'clear',
+    CLEAR_OUTLINE='clearOutline',
     CLEAR_INVERTED='clearInverted',
     OUTLINE = 'outline',
     OUTLINE_INVERTED='outlineInverted',

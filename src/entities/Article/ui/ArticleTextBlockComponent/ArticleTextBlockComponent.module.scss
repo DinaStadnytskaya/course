@@ -1,0 +1,8 @@
+.ArticleTextBlockComponent {
+    margin-bottom: 15px;
+    margin-right: auto;
+}
+
+.TextBlockParagraph:not(:last-child) {
+    margin-bottom: 5px;
+}

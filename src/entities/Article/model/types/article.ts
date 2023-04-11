@@ -1,40 +1,51 @@
+import { User } from 'entities/User';
+
 export enum ArticleBlockType {
   CODE = 'CODE',
   IMAGE = 'IMAGE',
-  TEXT = 'TEXT'
+  TEXT = 'TEXT',
+}
+
+export enum ArticleView {
+  BIG = 'BIG',
+  SMALL = 'SMALL',
 }
 
 export interface ArticleBlockBase {
   id: string;
   type: ArticleBlockType;
+
 }
 export interface ArticleCodeBlock extends ArticleBlockBase {
-    type: ArticleBlockType.CODE;
-    code: string[];
+  type: ArticleBlockType.CODE;
+  code: string;
+
 }
 export interface ArticleImageBlock extends ArticleBlockBase {
-    type: ArticleBlockType.IMAGE;
-    src: string;
-    title: string;
+  type: ArticleBlockType.IMAGE;
+  src: string;
+  title: string;
+
 }
 
 export interface ArticleTextBlock extends ArticleBlockBase {
-    type: ArticleBlockType.TEXT;
-    title?: string;
-    paragraph: string[];
+  type: ArticleBlockType.TEXT;
+  title?: string;
+  paragraphs: string[];
 }
 
-export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
+export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock
 
 export enum ArticleType {
   NEWS = 'NEWS',
   SCIENCE = 'SCIENCE',
-  PROBLEM = 'PROBLEM'
+  PROBLEM = 'PROBLEM',
 }
 
 export interface Article {
   id: string;
   title: string;
+  user: User;
   subtitle: string;
   img: string;
   views: number;

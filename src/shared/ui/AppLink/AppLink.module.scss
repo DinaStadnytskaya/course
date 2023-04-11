@@ -1,6 +1,17 @@
 .AppLink {
     text-decoration: none;
     padding: 6px 12px;
+    transition: all 0.2s linear;
+    opacity: 0.8;
+    fill-opacity: 0.8;
+
+    &:hover,
+    &:active,
+    &:checked,
+    &:focus {
+        opacity: 1;
+        fill-opacity: 1;
+    }
 }
 
 .primary {
@@ -8,5 +19,5 @@
 }
 
 .secondary {
-    color: var(--inverted-secondary-color);
+    color: var(--applink-color);
 }

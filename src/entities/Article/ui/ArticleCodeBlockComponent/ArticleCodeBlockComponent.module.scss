@@ -1,0 +1,25 @@
+.ArticleCodeBlockComponent {
+    position: relative;
+    border: 1px solid grey;
+    padding: 20px;
+    width: 1200px;
+    margin: 15px auto 15px 0;
+    background-color: var(--code-bg);
+    color: var(--bg-color);
+    overflow: auto;
+    border-radius: 8px;
+}
+
+.CopyBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    fill: var(--primary-color);
+
+    &:checked,
+    &:active,
+    &:focus {
+        top: 1px;
+    }
+}

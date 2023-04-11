@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/Theme';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 export default {
     title: 'shared/Text',
@@ -16,37 +16,58 @@ const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 export const primaryText = Template.bind({});
 primaryText.args = {
     title: 'hello world',
+    text: 'happy new year',
     theme: TextTheme.PRIMARY,
+    size: TextSize.M,
 };
 export const primaryTextDark = Template.bind({});
 primaryTextDark.args = {
     title: 'hello world',
+    text: 'happy new year',
     theme: TextTheme.PRIMARY,
+    size: TextSize.M,
 };
 primaryTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const coloredTitle = Template.bind({});
-coloredTitle.args = {
+export const errorText = Template.bind({});
+errorText.args = {
     title: 'hello world',
+    text: 'happy new year',
     theme: TextTheme.ERROR,
+    size: TextSize.L,
 };
 
-export const coloredTitleDark = Template.bind({});
-coloredTitleDark.args = {
+export const errorTextDark = Template.bind({});
+errorTextDark.args = {
     title: 'hello world',
-    theme: TextTheme.ERROR,
+    text: 'happy new year',
+    theme: TextTheme.SECONDARY,
+    size: TextSize.L,
 };
-coloredTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
+errorTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const coloredText = Template.bind({});
 coloredText.args = {
+    title: 'hello world',
     text: 'happy new year',
-    theme: TextTheme.ERROR,
+    theme: TextTheme.SUCCESS,
+    size: TextSize.XL,
 };
 
 export const coloredTextDark = Template.bind({});
 coloredTextDark.args = {
+    title: 'hello world',
     text: 'happy new year',
-    theme: TextTheme.ERROR,
+    theme: TextTheme.DANGER,
+    size: TextSize.XL,
 };
 coloredTextDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const warningText = Template.bind({});
+warningText.args = {
+    title: 'hello world',
+    text: 'happy new year',
+    theme: TextTheme.WARNING,
+    size: TextSize.XL,
+};
+warningText.decorators = [ThemeDecorator(Theme.DARK)];

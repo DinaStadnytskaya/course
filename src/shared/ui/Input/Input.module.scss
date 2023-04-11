@@ -1,14 +1,17 @@
 .InputWrapper {
     display: flex;
+    align-items: center;
     width: 100%;
     padding: 0;
-    color: var(--additional-color);
+
 }
 
 .placeholder {
-    width: auto;
+    flex: 0 1 auto;
+    padding: 0px;
     white-space: nowrap;
     font-size: var(--font-size-l);
+    color: var(--input-color);
 }
 
 .Input {
@@ -18,9 +21,10 @@
     border: none;
     outline: none;
     color: transparent;
-    text-shadow: 0 0 0 var(--additional-color);
+    text-shadow: 0 0 0 var(--input-color);
     white-space: wrap;
     font-size: var(--font-size-l);
+
 
     &:focus {
         border: none;
@@ -29,7 +33,7 @@
 }
 
 .caretWrapper {
-    flex-grow: 1;
+    flex: 1 1 auto;
     margin-left: auto;
     overflow: hidden;
     position: relative;

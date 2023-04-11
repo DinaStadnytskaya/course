@@ -1,4 +1,10 @@
 {
+  "Введите ваш комментарий": "Enter your comment",
+  "Вернуться к списку": "To come back to the list",
+  "Вернуться назад": "To come back",
+  "Отправить": "Send",
   "Произошла ошибка при загрузке статьи": "",
-  "Статья не найдена": "The article was not found"
+  "Статья не найдена": "The article was not found",
+  "Читать далее": "To read further",
+  "комментарии": "comments"
 }

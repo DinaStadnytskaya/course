@@ -5,16 +5,25 @@ import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
+import {
+    getProfileData,
+    getProfileReadonly,
+    profileActions,
+    updateProfileData,
+} from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { getAuthUserData } from 'entities/User';
 import cls from './ProfilePageHeader.module.scss';
 
- interface ProfilePageHeaderProps {
-className?: string;
+interface ProfilePageHeaderProps {
+    className?: string
 }
 export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
     const { t } = useTranslation('profile');
     const { className } = props;
+    const authData = useSelector(getAuthUserData);
+    const profileData = useSelector(getProfileData);
+    const canEdit = authData?.id === profileData?.id;
     const readonly = useSelector(getProfileReadonly);
     const dispatch = useAppDispatch();
     const onEdit = useCallback(() => {
@@ -31,34 +40,42 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
 
     return (
         <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+            {canEdit && (
+                <div className={cls.ButtonsWrapper}>
+                    {readonly ? (
+                        <Button
+                            theme={ThemeButton.OUTLINE}
+                            className={cls.editBtn}
+                            onClick={onEdit}
+                        >
+                            {t('редактировать')}
+                        </Button>
+                    ) : (
+                        <div className={cls.ButtonsBlock}>
+                            <Button
+                                theme={ThemeButton.OUTLINE_RED}
+                                className={cls.editBtn}
+                                onClick={onCancelEdit}
+                            >
+                                {t('отменить')}
+                            </Button>
+                            <Button
+                                theme={ThemeButton.OUTLINE}
+                                className={cls.saveBtn}
+                                onClick={onSave}
+                            >
+                                {t('сохранить')}
+                            </Button>
+                        </div>
+                    )}
+                </div>
+            ) }
             <Text
                 className={cls.Title}
                 title={t('Профиль')}
                 align={TextAlign.CENTER}
                 theme={TextTheme.SECONDARY}
             />
-            {readonly ? (
-                <Button theme={ThemeButton.OUTLINE} className={cls.editBtn} onClick={onEdit}>
-                    {t('редактировать')}
-                </Button>
-            ) : (
-                <div className={cls.ButtonsBlock}>
-                    <Button
-                        theme={ThemeButton.OUTLINE_RED}
-                        className={cls.editBtn}
-                        onClick={onCancelEdit}
-                    >
-                        {t('отменить')}
-                    </Button>
-                    <Button
-                        theme={ThemeButton.OUTLINE}
-                        className={cls.saveBtn}
-                        onClick={onSave}
-                    >
-                        {t('сохранить')}
-                    </Button>
-                </div>
-            )}
 
         </div>
     );

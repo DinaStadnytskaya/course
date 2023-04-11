@@ -1,16 +1,6 @@
-.title {
-    font-size: var(--font-size-xl);
-    line-height: 140%;
-}
-
-.text {
-    font-size: var(--font-size-m);
-    line-height: 140%;
-}
-
 .primary {
     .title {
-        color: var(--additional-color);
+        color: var(--inverted-secondary-color);
     }
 
     .text {
@@ -38,4 +28,34 @@
 
 .center {
     text-align: center;
+}
+
+.size_m {
+    .title {
+        font: var(--font-l);
+    }
+
+    .text {
+        font: var(--font-m);
+    }
+}
+
+.size_l {
+    .title {
+        font: var(--font-xl);
+    }
+
+    .text {
+        font: var(--font-l);
+    }
+}
+
+.size_xl {
+    .title {
+        font: var(--font-xxl);
+    }
+
+    .text {
+        font: var(--font-l);
+    }
 }
