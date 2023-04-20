@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/Theme';
@@ -7,7 +6,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { Navbar } from './Navbar';
 
 export default {
-    title: 'widget/Navbar',
+    title: 'widgets/Navbar',
     component: Navbar,
     argTypes: {
         backgroundColor: { control: 'color' },

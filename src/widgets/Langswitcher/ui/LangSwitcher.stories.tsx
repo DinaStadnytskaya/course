@@ -1,12 +1,11 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import 'app/styles/index.scss';
 import { Theme } from 'app/providers/Theme';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import LangSwitcher from './LangSwitcher';
+import { LangSwitcher } from './LangSwitcher';
 
 export default {
-    title: 'widget/LangSwitcher',
+    title: 'widgets/LangSwitcher',
     component: LangSwitcher,
     argTypes: {
         backgroundColor: { control: 'color' },

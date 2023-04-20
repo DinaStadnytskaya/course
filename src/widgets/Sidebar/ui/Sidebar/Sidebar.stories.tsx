@@ -6,7 +6,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import Sidebar from 'widgets/Sidebar/ui/Sidebar/Sidebar';
 
 export default {
-    title: 'widget/Sidebar',
+    title: 'widgets/Sidebar',
     component: Sidebar,
     argTypes: {
         backgroundColor: { control: 'color' },
