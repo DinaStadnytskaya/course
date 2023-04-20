@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BugButton } from 'widgets/PageError';
-import { Page } from 'shared/ui/Page';
+import { Page } from 'widgets/Page';
 import cls from './MainPage.module.scss';
 
 const MainPage = () => {

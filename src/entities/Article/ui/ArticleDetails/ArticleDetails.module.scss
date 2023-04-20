@@ -20,14 +20,19 @@
 }
 
 .ArticleDetailsAvatarWrapper {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
 }
+
+.ArticleDetailsAvatar {
+   object-fit: cover;
+}
+
 
 .ArticleDetailsText {
     max-width: 1200px;

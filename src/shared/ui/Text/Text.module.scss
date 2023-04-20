@@ -8,6 +8,16 @@
     }
 }
 
+.success {
+    .title {
+        color: var(--applink-color);
+    }
+
+    .text {
+        color: var(--applink-color);
+    }
+}
+
 .error {
     .title {
         color: var(--text-color);

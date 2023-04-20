@@ -1,0 +1,43 @@
+.ArticleDetailsPage {}
+
+.ArticleDetailsHeader {
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.ArticleDetailsTitle {
+    margin-bottom: 20px;
+}
+
+.ArticleDetailsBlock {
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.ArticleDetailsRecommendations {
+    max-width: 1200px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.ArticleDetailsList {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}
+
+.ArticleDetailsComments {
+    max-width: 1200px;
+    width: 100%;
+
+}

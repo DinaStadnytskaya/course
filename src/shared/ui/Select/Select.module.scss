@@ -3,29 +3,32 @@
     align-items: center;
     justify-content: flex-start;
     column-gap: 10px;
-    width: 100%;
+    width: auto;
+    flex-wrap: nowrap;
+}
 
-    .LabelWrapper {
-        min-width: 150px;
-    }
+.LabelWrapper {
+    padding: 0px 20px 0px 0px;
 
-    .Label {
-        font-size: var(--font-size-l);
-        color: var(--input-color);
-    }
+}
 
-    .Select {
-        background: none;
-        outline: none;
-        color: var(--input-color);
-        padding: 2px 10px 2px 2px;
-        border: 2px solid var(--input-color);
-        font-size: var(--font-size-l);
-    }
+.Select {
+    background: none;
+    outline: none;
+    color: var(--inverted-bg-color);
+    padding: 2px 10px 2px 2px;
+    border: 2px solid var(--inverted-bg-color);
+    border-radius: 2px;
+    font-size: var(--font-size-l);
+}
 
-    .Option {
-        background: var(--inverted-bg-color);
-        font-size: var(--font-size-l);
-        color: var(--input-color);
-    }
+.Option {
+    background: var(--bg-color);
+    font-size: var(--font-size-l);
+    color: var(--inverted-bg-color);
+}
+
+.Label {
+    font-size: var(--font-size-l);
+    color: var(--inverted-bg-color);
 }

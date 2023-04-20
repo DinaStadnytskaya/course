@@ -1,0 +1,26 @@
+.ArticlesPageFilters {
+    width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.FiltersBlock {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.FiltersSearch {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 5px;
+    &:hover {
+        transform: none;
+    }
+
+}

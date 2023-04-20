@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-children-prop */
-import { memo, useCallback } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
@@ -8,7 +8,6 @@ import { ImEye } from 'react-icons/im';
 import { Card } from 'shared/ui/Card';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import {
@@ -22,17 +21,18 @@ interface ArticleListItemProps {
     className?: string;
     article: Article;
     view: ArticleView;
-
+    target?: HTMLAttributeAnchorTarget;
 }
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const { t } = useTranslation('articledetails');
-    const { className, article, view } = props;
-    const navigate = useNavigate();
-    const onOpenArticle = useCallback(() => {
-        navigate(RoutePath.article_details + article.id);
-    }, [navigate, article.id]);
+    const {
+        className,
+        article,
+        view,
+        target,
+    } = props;
 
-    const types = <Text text={article.type.join(', ')} className={cls.ArticleTypes} />;
+    const types = <Text text={article.type.join(',')} className={cls.ArticleTypes} />;
     const views = (
         <div className={cls.ArticleElement}>
             <ImEye />
@@ -53,10 +53,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     [className, cls[view]],
                 )}
             >
-                <Card className={cls.ArticleCard} onClick={onOpenArticle}>
+                <Card className={cls.ArticleCard}>
                     <div className={cls.ArticleHeader}>
                         <div className={cls.ArticleElement}>
-                            <Avatar size={50} src={article.user.avatar} />
+                            <Avatar size={50} src={article.user.avatar} alt={article.user.avatar} />
                             <Text text={article.user.username} className={cls.ArticleAvatar} />
                         </div>
                         <Text text={article.createdAt} className={cls.ArticleAdd} />
@@ -76,14 +76,14 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                             />
                         ) }
                         <div className={cls.ArticleFooter}>
-                            <Button
-                                className={cls.ArticleButton}
-                                onClick={onOpenArticle}
-                                theme={ThemeButton.BACKGROUND_INVERTED}
-                            >
-                                {t('Читать далее')}
-
-                            </Button>
+                            <AppLink to={RoutePath.article_details + article.id} target={target}>
+                                <Button
+                                    className={cls.ArticleButton}
+                                    theme={ThemeButton.BACKGROUND_INVERTED}
+                                >
+                                    {t('Читать далее')}
+                                </Button>
+                            </AppLink>
                             {views}
                         </div>
                     </div>
@@ -100,30 +100,35 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                 [className, cls[view]],
             )}
         >
-            <AppLink
-                className={cls.ArticleLink}
-                to={`${RoutePath.profile}${article.user.id}`}
-            >
-                <Avatar size={50} src={article.user.avatar} />
-            </AppLink>
-            <Card className={cls.ArticleCard} onClick={onOpenArticle}>
-                <div className={cls.ArticleImageWrapper}>
-                    <img
-                        src={article.img}
-                        className={cls.ArticleImageSmall}
-                        alt={article.img}
+            <div className={cls.SkeletonWrapper}>
+                <AppLink
+                    to={`${RoutePath.profile}${article.user.id}`}
+                >
+                    <Avatar size={50} src={article.user.avatar} />
+                </AppLink>
+            </div>
+            <Card className={cls.ArticleCard}>
+                <AppLink to={RoutePath.article_details + article.id} target={target} className={cls.ArticleLink}>
+                    <div className={cls.ArticleImageWrapper}>
+                        <img
+                            src={article.img}
+                            className={cls.ArticleImageSmall}
+                            alt={article.img}
+                        />
+                        <Text text={article.createdAt} className={cls.ArticleData} />
+                    </div>
+                    <div className={cls.ArticleInfo}>
+                        {types}
+                        {views}
+                    </div>
+                    <Text
+                        text={article.title}
+                        className={cls.ArticleTitle}
                     />
-                    <Text text={article.createdAt} className={cls.ArticleData} />
-                </div>
-                <div className={cls.ArticleInfo}>
-                    {types}
-                    {views}
-                </div>
-                <Text
-                    text={article.title}
-                    className={cls.ArticleTitle}
-                />
+                </AppLink>
             </Card>
+
         </div>
+
     );
 });

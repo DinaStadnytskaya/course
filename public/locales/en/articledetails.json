@@ -2,9 +2,24 @@
   "Введите ваш комментарий": "Enter your comment",
   "Вернуться к списку": "To come back to the list",
   "Вернуться назад": "To come back",
+  "Наука": "Science",
+  "Новости": "News",
   "Отправить": "Send",
-  "Произошла ошибка при загрузке статьи": "",
+  "По": "By",
+  "Поиск": "Search",
+  "Проблема": "Problem",
+  "Произошла ошибка при загрузке статьи": "An error occurred while loading the article!",
+  "Сортировать по": "Sort by",
   "Статья не найдена": "The article was not found",
   "Читать далее": "To read further",
-  "комментарии": "comments"
+  "возрастанию": "Ascending",
+  "дате создания": "creation date",
+  "заголовку": "title",
+  "количеству просмотров": "number of views",
+  "комментарии": "comments",
+  "убыванию": "descending",
+  "Статьи не найдены!":"Articles were not found!",
+  "Рекомендуем": "Recommend you",
+  "Редактировать": "Edit"
+
 }

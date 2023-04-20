@@ -4,12 +4,12 @@ declare module '*.scss' {
         [className: string]: string
     }
     const classNames: IClassNames;
-    export = classNames;
+    export = classNames
 }
 
-declare module '*.png';
-declare module '*.jpg';
-declare module '*.jpeg';
+declare module '*.png'
+declare module '*.jpg'
+declare module '*.jpeg'
 declare module '*.svg' {
     import React from 'react';
 
@@ -23,4 +23,7 @@ declare const __PROJECT__: 'storybook' | 'frontend' | 'jest';
 
 type DeepPartial<T> = T extends object ? {
     [P in keyof T]?: DeepPartial<T[P]>
-} : T;
+} : T
+type OptionalRecord<K extends keyof any, T> = {
+    [P in K]?: T
+}

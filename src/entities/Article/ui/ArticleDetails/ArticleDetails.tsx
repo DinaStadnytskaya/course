@@ -80,7 +80,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             <div className={cls.SceletonWrapper}>
                 <Skeleton className={cls.CircleSceleton} border={'50%'} width={200} height={200} />
                 <Skeleton className={cls.SquareSceleton} border={'0%'} width={300} height={32} />
-                <Skeleton className={cls.SquareSceleton} border={'0%'} width={600} height={24} />
+                <Skeleton className={cls.SquareSceleton} border={'0%'} width={1200} height={24} />
                 <Skeleton className={cls.SquareSceleton} border={'0%'} width="100%" height={200} />
                 <Skeleton className={cls.SquareSceleton} border={'0%'} width="100%" height={200} />
             </div>

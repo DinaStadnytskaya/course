@@ -4,20 +4,20 @@ import { useTranslation } from 'react-i18next';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Select.module.scss';
 
-export interface SelectOption {
-    value: string;
+export interface SelectOption<T extends string> {
+    value: T;
     content: string;
 }
 
-interface SelectProps {
-    className?: string;
-    label?: string;
-    options?: SelectOption[];
-    value?: string;
-    onChange?: (value: string) => void;
+interface SelectProps<T extends string> {
+    className?: T;
+    label?: T;
+    options?: SelectOption<T>[];
+    value?: T;
+    onChange?: (value: T) => void;
     readonly?: boolean;
 }
-export const Select = memo((props: SelectProps) => {
+export const Select = <T extends string>(props: SelectProps<T>) => {
     const {
         className,
         label,
@@ -29,7 +29,7 @@ export const Select = memo((props: SelectProps) => {
     const { t } = useTranslation();
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
         if (onChange) {
-            onChange(e.target.value);
+            onChange(e.target.value as T);
         }
     };
 
@@ -52,7 +52,7 @@ export const Select = memo((props: SelectProps) => {
             <div className={cls.LabelWrapper}>
                 {label && (
                     <span className={cls.Label}>
-                        {`${label}>`}
+                        {`${label} >`}
                     </span>
                 )}
             </div>
@@ -66,4 +66,4 @@ export const Select = memo((props: SelectProps) => {
             </select>
         </div>
     );
-});
+};

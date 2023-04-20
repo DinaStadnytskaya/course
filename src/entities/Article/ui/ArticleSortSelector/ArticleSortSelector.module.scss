@@ -1,0 +1,12 @@
+.ArticleSortSelector {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.SelectCard {
+    border: none;
+    &:hover {
+        transform: none;
+    }
+}

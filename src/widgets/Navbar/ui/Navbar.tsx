@@ -5,6 +5,9 @@ import { LoginModal } from 'features/AuthByUsername';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAuthUserData, userActions } from 'entities/User';
+import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -12,7 +15,7 @@ interface NavbarProps {
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('articleedit');
     const dispatch = useDispatch();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getAuthUserData);
@@ -31,36 +34,66 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     );
     if (authData) {
         return (
-            <div className={classNames(cls.Navbar, {}, [className])}>
+            <header className={classNames(cls.Navbar, {}, [className])}>
+                <div className={cls.NavbarLogo}>
+                    <AppLink to={RoutePath.main}>
+                        <Text
+                            size={TextSize.XL}
+                            title={t('Айтилиба')}
+                            theme={TextTheme.SUCCESS}
+                        />
+                    </AppLink>
+                </div>
+                <div className={cls.NavbarLinks}>
+                    <AppLink to={RoutePath.article_create}>
+                        <Button
+                            theme={ThemeButton.CLEAR_OUTLINE}
+                            className={cls.NavbarButton}
+                            size={SizeButton.L}
+                        >
+                            {t('Создать статью')}
+                        </Button>
+                    </AppLink>
+                    <Button
+                        theme={ThemeButton.CLEAR_OUTLINE}
+                        className={cls.NavbarButton}
+                        size={SizeButton.L}
+                        onClick={onLogOut}
+                    >
+                        {t('выйти')}
+                    </Button>
+                </div>
+            </header>
+        );
+    }
+    return (
+        <header className={classNames(cls.Navbar, {}, [className])}>
+            <div className={cls.NavbarLogo}>
+                <AppLink to={RoutePath.main}>
+                    <Text
+                        size={TextSize.XL}
+                        title={t('Айтилиба')}
+                        theme={TextTheme.SUCCESS}
+                    />
+                </AppLink>
+            </div>
+            <div className={cls.NavbarLinks}>
                 <Button
                     theme={ThemeButton.CLEAR_OUTLINE}
                     className={cls.NavbarButton}
                     size={SizeButton.L}
-                    onClick={onLogOut}
+                    onClick={onOpenModal}
                 >
-                    {t('выйти')}
+                    {t('войти')}
                 </Button>
-            </div>
-        );
-    }
-    return (
-        <div className={classNames(cls.Navbar, {}, [className])}>
-            <Button
-                theme={ThemeButton.CLEAR_OUTLINE}
-                className={cls.NavbarButton}
-                size={SizeButton.L}
-                onClick={onOpenModal}
-            >
-                {t('войти')}
-            </Button>
-            {isAuthModal
+                {isAuthModal
              && (
                  <LoginModal
                      isOpen={isAuthModal}
                      onClose={onCloseModal}
                  />
              )}
-
-        </div>
+            </div>
+        </header>
     );
 });

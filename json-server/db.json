@@ -4,103 +4,10 @@
       "id": "1",
       "title": "How to Get/Detect Window Size(Height & Width) in React js",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
-      "img": "https://blog.logrocket.com/wp-content/uploads/2019/05/create-react-app-getting-started.png",
-      "views": "654",
+      "img": "https://i.morioh.com/2023/04/12/0c5546ac.webp",
+      "views": 654,
       "createdAt": "03.04.2023",
       "userId": "1",
-      "type": [
-        "NEWS"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "How to Get/Detect Window Size(Height & Width) in React Js",
-          "paragraphs": [
-            "Here is steps to get or detect window size in react js app:",
-            "Step 1 – Create React App",
-            "Step 2 – Create Simple Component",
-            "Step 3 – Add Component in App.js"
-          ]
-        },
-        {
-          "id": "2",
-          "type": "TEXT",
-          "title": "Step 1 – Create React App",
-          "paragraphs": [
-            "In this step, open your terminal and execute the following command on your terminal to create a new react app:",
-            "To run the React app, execute the following command on your terminal:",
-            "Check out your React app on this URL: localhost: 3000"
-          ]
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "Step 2 – Create Simple Component",
-          "paragraphs": [
-            "Visit the src directory of your react js app and create get dynamic height and width component named",
-            " UserWindow.js. And add the following code into it:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "import React, { Component } from \"react\";\n\nclass UserWindow extends Component {\n\n    render() {\n\nreturn (\n\n<> </>\n\n);\n\n}\n\n}\n\nexport default UserWindow;\n\n"
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "paragraphs": [
-            "Then implement code to detect window height width on window resize; as shown below:",
-            "This is a React component that renders a user window with the dynamic width and height of the browser window."
-          ]
-        },
-        {
-          "id": "6",
-          "type": "CODE",
-          "code": "import React, { useState, useEffect } from 'react';\n\nexport default function UserWindow() {\n\nconst [screenSize, getDimension] = useState({\n\ndynamicWidth: window.innerWidth,\n\ndynamicHeight: window.innerHeight\n\n});\n\nconst setDimension = () => {\n\ngetDimension({\n\ndynamicWidth: window.innerWidth,\n\ndynamicHeight: window.innerHeight\n\n})\n\n}\n\nuseEffect(() => {\n\nwindow.addEventListener('resize', setDimension);\n\nreturn(() => {\n\nwindow.removeEventListener('resize', setDimension);\n\n})\n\n},\n\n[screenSize])\n\nreturn (\n\n<div>\n\n<ul>\n\n<li>Width: <strong>{screenSize.adynamicWidth}</strong></li>\n\n<li>Height: <strong>{screenSize.dynamicHeight}</strong></li>\n\n</ul>\n\n</div>\n\n)\n\n}"
-        },
-        {
-          "id": "7",
-          "type": "TEXT",
-          "paragraphs": [
-            "So overall, this component sets up an event listener to track the changes in the size of the browser window and",
-            "updates the state accordingly using the useState and useEffect hooks. The updated state is then displayed",
-            "within the component."
-          ]
-        },
-        {
-          "id": "8",
-          "type": "TEXT",
-          "title": "Step 3 – Add Component in App.js",
-          "paragraphs": [
-            "In this step, you need to add  UserWindow.js file in src/App.js file:",
-            "Conclusion",
-            "React Get Window Height Width; In this tutorial, you have learned how detect or get dynamic window height and",
-            "width in react js application."
-          ]
-        },
-        {
-          "id": "9",
-          "type": "CODE",
-          "code": "import React from 'react';\n\nimport './App.css';\n\nimport UrlComponent from './components/UrlComponent';\n\nfunction App() {\n\nreturn (\n\n<div className=\"App\">\n\n<UrlComponent />\n\n</div>\n\n);}\n\nexport default App;"
-        },
-        {
-          "id": "10",
-          "type": "IMAGE",
-          "src": "https://cbsedu.blob.core.windows.net/course-video-covers/course-video-covers-9e140169-c4e7-414d-ae41-a855a5ad48f8.jpg",
-          "title": "Рисунок 1"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
-      "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
-      "img": "https://uploads.sitepoint.com/wp-content/uploads/2016/01/1505804127react-universal.jpg",
-      "views": "654",
-      "createdAt": "05.12.2022",
-      "userId": "2",
       "type": [
         "PROBLEM"
       ],
@@ -187,13 +94,13 @@
       ]
     },
     {
-      "id": "3",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
+      "id": "2",
+      "title": "The Smart4Health User Portal Application with React",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
-      "img": "https://assets.toptal.io/images?url=https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1154082/retina_500x200_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png",
-      "views": "654",
-      "createdAt": "01.02.2023",
-      "userId": "3",
+      "img": "https://uploads.sitepoint.com/wp-content/uploads/2016/01/1505804127react-universal.jpg",
+      "views": 243,
+      "createdAt": "05.12.2022",
+      "userId": "2",
       "type": [
         "SCIENCE"
       ],
@@ -280,15 +187,108 @@
       ]
     },
     {
-      "id": "4",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
+      "id": "3",
+      "title": "Web3 Wallet general solution template in React.js",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
-      "img": "https://st2.depositphotos.com/1002277/10399/i/450/depositphotos_103992750-stock-photo-react-cubics-word.jpg",
-      "views": "654",
+      "img": "https://i.morioh.com/2023/04/11/465e8e5f.webp",
+      "views": 48,
       "createdAt": "01.02.2023",
-      "userId": "4",
+      "userId": "3",
       "type": [
         "NEWS"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "How to Get/Detect Window Size(Height & Width) in React Js",
+          "paragraphs": [
+            "Here is steps to get or detect window size in react js app:",
+            "Step 1 – Create React App",
+            "Step 2 – Create Simple Component",
+            "Step 3 – Add Component in App.js"
+          ]
+        },
+        {
+          "id": "2",
+          "type": "TEXT",
+          "title": "Step 1 – Create React App",
+          "paragraphs": [
+            "In this step, open your terminal and execute the following command on your terminal to create a new react app:",
+            "To run the React app, execute the following command on your terminal:",
+            "Check out your React app on this URL: localhost: 3000"
+          ]
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Step 2 – Create Simple Component",
+          "paragraphs": [
+            "Visit the src directory of your react js app and create get dynamic height and width component named",
+            " UserWindow.js. And add the following code into it:"
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import React, { Component } from \"react\";\n\nclass UserWindow extends Component {\n\n    render() {\n\nreturn (\n\n<> </>\n\n);\n\n}\n\n}\n\nexport default UserWindow;\n\n"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "paragraphs": [
+            "Then implement code to detect window height width on window resize; as shown below:",
+            "This is a React component that renders a user window with the dynamic width and height of the browser window."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "import React, { useState, useEffect } from 'react';\n\nexport default function UserWindow() {\n\nconst [screenSize, getDimension] = useState({\n\ndynamicWidth: window.innerWidth,\n\ndynamicHeight: window.innerHeight\n\n});\n\nconst setDimension = () => {\n\ngetDimension({\n\ndynamicWidth: window.innerWidth,\n\ndynamicHeight: window.innerHeight\n\n})\n\n}\n\nuseEffect(() => {\n\nwindow.addEventListener('resize', setDimension);\n\nreturn(() => {\n\nwindow.removeEventListener('resize', setDimension);\n\n})\n\n},\n\n[screenSize])\n\nreturn (\n\n<div>\n\n<ul>\n\n<li>Width: <strong>{screenSize.adynamicWidth}</strong></li>\n\n<li>Height: <strong>{screenSize.dynamicHeight}</strong></li>\n\n</ul>\n\n</div>\n\n)\n\n}"
+        },
+        {
+          "id": "7",
+          "type": "TEXT",
+          "paragraphs": [
+            "So overall, this component sets up an event listener to track the changes in the size of the browser window and",
+            "updates the state accordingly using the useState and useEffect hooks. The updated state is then displayed",
+            "within the component."
+          ]
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Step 3 – Add Component in App.js",
+          "paragraphs": [
+            "In this step, you need to add  UserWindow.js file in src/App.js file:",
+            "Conclusion",
+            "React Get Window Height Width; In this tutorial, you have learned how detect or get dynamic window height and",
+            "width in react js application."
+          ]
+        },
+        {
+          "id": "9",
+          "type": "CODE",
+          "code": "import React from 'react';\n\nimport './App.css';\n\nimport UrlComponent from './components/UrlComponent';\n\nfunction App() {\n\nreturn (\n\n<div className=\"App\">\n\n<UrlComponent />\n\n</div>\n\n);}\n\nexport default App;"
+        },
+        {
+          "id": "10",
+          "type": "IMAGE",
+          "src": "https://cbsedu.blob.core.windows.net/course-video-covers/course-video-covers-9e140169-c4e7-414d-ae41-a855a5ad48f8.jpg",
+          "title": "Рисунок 1"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "A Highly Customisable React Date Dropdown Library",
+      "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
+      "img": "https://st2.depositphotos.com/1002277/10399/i/450/depositphotos_103992750-stock-photo-react-cubics-word.jpg",
+      "views": 1022,
+      "createdAt": "17.11.2022",
+      "userId": "4",
+      "type": [
+        "PROBLEM"
       ],
       "blocks": [
         {
@@ -374,14 +374,14 @@
     },
     {
       "id": "5",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
+      "title": "Mirrorful: Create The Building Blocks Of Your App using React",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
       "img": "https://st2.depositphotos.com/1211400/47067/i/600/depositphotos_470673368-stock-photo-react-wooden-blocks-balance-concept.jpg",
-      "views": "654",
+      "views": 803,
       "createdAt": "03.02.2022",
       "userId": "2",
       "type": [
-        "NEWS"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -467,11 +467,11 @@
     },
     {
       "id": "6",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
+      "title": "Easy-to-use, Composable React Selection Popover",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
       "img": "https://st2.depositphotos.com/1211400/45875/i/450/depositphotos_458753824-stock-photo-react-language-programming-web-apps.jpg",
-      "views": "654",
-      "createdAt": "15.01.2023",
+      "views": 456,
+      "createdAt": "01.03.2023",
       "userId": "4",
       "type": [
         "PROBLEM"
@@ -560,14 +560,13 @@
     },
     {
       "id": "7",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
+      "title": "Create A Loading Animation in React with React-spinners",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
       "img": "https://st2.depositphotos.com/30845988/42712/i/1600/depositphotos_427124532-stock-photo-react-inscription-laptop-code-background.jpg",
-      "views": "654",
-      "createdAt": "24.02.2023",
+      "views": 245,
+      "createdAt": "02.06.2022",
       "userId": "3",
       "type": [
-        "PROBLEM",
         "NEWS"
       ],
       "blocks": [
@@ -654,11 +653,11 @@
     },
     {
       "id": "8",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
+      "title": "A Wishlist App Made with React and MobX",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
-      "img": "https://blog.logrocket.com/wp-content/uploads/2020/06/javascript-concepts-before-learning-react.jpg",
-      "views": "654",
-      "createdAt": "24.02.2023",
+      "img": "https://i.morioh.com/2023/04/12/fb8cc53b.webp",
+      "views": 693,
+      "createdAt": "01.09.2022",
       "userId": "2",
       "type": [
         "NEWS"
@@ -747,11 +746,11 @@
     },
     {
       "id": "9",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
+      "title": "How to Validate Forms in React",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
       "img": "https://kinsta.com/wp-content/uploads/2022/06/what-is-react-js-feature-image.png",
-      "views": "654",
-      "createdAt": "24.02.2023",
+      "views": 813,
+      "createdAt": "15.03.2023",
       "userId": "3",
       "type": [
         "PROBLEM"
@@ -840,14 +839,14 @@
     },
     {
       "id": "10",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
+      "title": "Using JavaScript map() Method to Render a List of Items in React",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
       "img": "https://www.tabnine.com/blog/wp-content/uploads/2020/11/blog-4-1.png",
-      "views": "654",
-      "createdAt": "24.02.2023",
+      "views": 164,
+      "createdAt": "18.12.2022",
       "userId": "1",
       "type": [
-        "NEWS"
+        "PROBLEM"
       ],
       "blocks": [
         {
@@ -933,10 +932,10 @@
     },
     {
       "id": "11",
-      "title": "How to Get/Detect Window Size(Height & Width) in React js",
+      "title": "Create A Loading Animation in React with React-spinners",
       "subtitle": "In this Reactjs tutorial, we will learn about How to Get/Detect Window Size(Height & Width) in React js. React Js get window height& width on window resize; In this tutorial, you will learn how to detect the dynamic window width and height on window resize using react useState and useEffect hooks.",
       "img": "https://www.classcentral.com/report/wp-content/uploads/2022/10/React-JS-BCG-Banner.png",
-      "views": "654",
+      "views": 999,
       "createdAt": "24.02.2023",
       "userId": "4",
       "type": [
@@ -1027,19 +1026,19 @@
   ],
   "comments": [
     {
-      "id": "1",
+      "id": "F20LY52",
       "text": "some comment 1",
       "userId": "1",
       "articleId": "1"
     },
     {
-      "id": "2",
+      "id": "F20LY53",
       "text": "some comment 2",
       "userId": "1",
       "articleId": "1"
     },
     {
-      "id": "3",
+      "id": "F20LY54",
       "text": "some comment 3",
       "userId": "3",
       "articleId": "1"

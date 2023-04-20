@@ -27,6 +27,11 @@ export interface ArticleImageBlock extends ArticleBlockBase {
   title: string;
 
 }
+export enum ArticleSortField {
+  VIEWS = 'views',
+  TITLE = 'title',
+  CREATED = 'createdAt',
+}
 
 export interface ArticleTextBlock extends ArticleBlockBase {
   type: ArticleBlockType.TEXT;
@@ -37,6 +42,7 @@ export interface ArticleTextBlock extends ArticleBlockBase {
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock
 
 export enum ArticleType {
+  ALL = 'ALL',
   NEWS = 'NEWS',
   SCIENCE = 'SCIENCE',
   PROBLEM = 'PROBLEM',
