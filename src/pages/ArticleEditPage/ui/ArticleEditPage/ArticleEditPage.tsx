@@ -17,11 +17,11 @@ const ArticleEditPage = (props: ArticleEditPageProps) => {
     const isEdit = Boolean(1);
     return (
         // <DynamicModuleLoader>
-        <div className={classNames(cls.ArticleEditPage, {}, [className])}>
+        <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
             {isEdit
                 ? t('Редактирование статьи с ID=') + id
                 : t('Создание новой статьи')}
-        </div>
+        </Page>
         // </DynamicModuleLoader>
     );
 };

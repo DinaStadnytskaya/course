@@ -3,12 +3,11 @@
     align-items: center;
     width: 100%;
     padding: 0;
-
 }
 
 .placeholder {
     flex: 0 1 auto;
-    padding: 0px;
+    padding: 0;
     white-space: nowrap;
     font-size: var(--font-size-l);
     color: var(--input-color);
@@ -24,7 +23,6 @@
     text-shadow: 0 0 0 var(--input-color);
     white-space: wrap;
     font-size: var(--font-size-l);
-
 
     &:focus {
         border: none;

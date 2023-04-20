@@ -1,151 +1,147 @@
-  .ArticleListItem {
-      padding: 10px;      
-  }
+.ArticleListItem {
+    padding: 10px;
+}
 
-  .BIG {
-      .ArticleCard {
-          width: 1200px;
-          height: auto;
-          padding: 20px;
-      }
+.BIG {
+    .ArticleCard {
+        width: 1200px;
+        height: auto;
+        padding: 20px;
+    }
 
-      .ArticleHeader {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 15px;
-      }
+    .ArticleHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
 
-      .ArticleElement {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          column-gap: 10px;
-      }
+    .ArticleElement {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 10px;
+    }
 
-      .ArticleBody {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          row-gap: 10px;
-          margin-bottom: 15px
-      }
+    .ArticleBody {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 10px;
+        margin-bottom: 15px;
+    }
 
-      .ArticleTitle {
-          white-space: nowrap;
-          margin-bottom: 10px;
-      }
+    .ArticleTitle {
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
 
-      .ArticleTypes p {
-          white-space: nowrap;
-      }
+    .ArticleTypes p {
+        white-space: nowrap;
+    }
 
-      .ArticleImage {
-          width: 100%;
-          height: 300px;
-          object-fit: cover;
-          object-position: center;
+    .ArticleImage {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
 
-      }
+    .ArticleBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 100px;
+        overflow-y: hidden;
+    }
 
-      .ArticleBlock {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          max-height: 100px;
-          overflow-y: hidden;
+    .ArticleFooter {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-      }
+    .ArticleButton {
+        padding: 0 10px;
+        border-radius: 2px;
+    }
+}
 
-      .ArticleFooter {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-      }
+.SMALL {
+    .SkeletonWrapper {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .ArticleLink {
+        width: 330px;
+        height: 400px;
+    }
+
+    .ArticleData {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        display: none;
+        transition: all 0.4s linear;
+    }
+
+    .ArticleCard {
+        width: 330px;
+        height: 400px;
+        padding: 10px;
+
+        &:hover {
+            .ArticleData {
+                display: block;
+            }
+        }
+    }
+
+    .ArticleImageWrapper {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .ArticleImageSmall {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 
 
-      .ArticleButton {
-          padding: 0px 10px;
-          border-radius: 2px;
-      }
-  }
 
+    .ArticleInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
 
+    .ArticleElement {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 10px;
+    }
 
-  .SMALL {
-      .SkeletonWrapper {
-          width: 100%;
-          height: 60px;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-      }
+    .ArticleTypes p {
+        white-space: wrap;
+    }
 
-      .ArticleLink {
-          width: 330px;
-          height: 400px;
-      }
+    .ArticleTitle {
+        margin-bottom: 10px;
 
-      .ArticleCard {
-          width: 330px;
-          height: 400px;
-          padding: 10px;
-
-          &:hover {
-              .ArticleData {
-                  display: block;
-              }
-          }
-      }
-
-      .ArticleImageWrapper {
-          width: 100%;
-          height: 200px;
-          margin-bottom: 10px;
-          position: relative;
-      }
-
-      .ArticleImageSmall {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-      }
-
-      .ArticleData {
-          position: absolute;
-          top: 5px;
-          right: 10px;
-          display: none;
-          transition: all .4s linear;
-      }
-
-      .ArticleInfo {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 15px;
-      }
-
-      .ArticleElement {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          column-gap: 10px;
-      }
-
-      .ArticleTypes p {
-          white-space: wrap;
-      }
-
-      .ArticleTitle {
-          margin-bottom: 10px;
-
-          p {
-              white-space: wrap;
-          }
-
-      }
-  }
+        p {
+            white-space: wrap;
+        }
+    }
+}
