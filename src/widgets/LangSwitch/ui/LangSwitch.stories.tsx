@@ -2,18 +2,18 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import 'app/styles/index.scss';
 import { Theme } from 'app/providers/Theme';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { LangSwitcher } from './LangSwitcher';
+import { LangSwitch } from './LangSwitch';
 
 export default {
-    title: 'widgets/LangSwitcher',
-    component: LangSwitcher,
+    title: 'widgets/LangSwitch',
+    component: LangSwitch,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof LangSwitcher>;
+} as ComponentMeta<typeof LangSwitch>;
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-const Template: ComponentStory<typeof LangSwitcher> = (args) => <LangSwitcher {...args} />;
+const Template: ComponentStory<typeof LangSwitch> = (args) => <LangSwitch {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

@@ -3,18 +3,18 @@ import { useTheme } from 'app/providers/Theme';
 import Icon from 'shared/assets/icons/Icon.svg';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { memo } from 'react';
-import cls from './ThemeSwitcher.module.scss';
+import cls from './ThemeSwitch.module.scss';
 
-interface ThemeSwitcherProps {
+interface ThemeSwitchProps {
     className?: string;
 }
 
-export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
+export const ThemeSwitch = memo(({ className }: ThemeSwitchProps) => {
     const { theme, toggleTheme } = useTheme();
     return (
         <Button
             theme={ThemeButton.CLEAR}
-            className={classNames(cls.ThemeSwitcher, {}, [className, cls[theme]])}
+            className={classNames(cls.ThemeSwitch, {}, [className, cls[theme]])}
             onClick={toggleTheme}
         >
             <Icon className={cls.ThemeIcon} />

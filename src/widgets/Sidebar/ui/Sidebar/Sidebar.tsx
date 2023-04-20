@@ -2,8 +2,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useMemo, useState } from 'react';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { LangSwitcher } from 'widgets/LangSwitcher';
+import { ThemeSwitch } from 'widgets/ThemeSwitch';
+import { LangSwitch } from 'widgets/LangSwitch';
 import cls from './Sidebar.module.scss';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
@@ -46,8 +46,8 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 {itemsList}
             </div>
             <div className={cls.switchers}>
-                <ThemeSwitcher />
-                <LangSwitcher short={collapsed} />
+                <ThemeSwitch />
+                <LangSwitch short={collapsed} />
             </div>
         </div>
     );
