@@ -10,22 +10,19 @@ import cls from './ArticleEditPage.module.scss';
 interface ArticleEditPageProps {
 className?: string;
 }
-const reducers: ReducersList = {
-
-};
 const ArticleEditPage = (props: ArticleEditPageProps) => {
     const { t } = useTranslation('articledetails');
     const { className } = props;
     const { id } = useParams<{ id: string }>();
-    const isEdit = Boolean(id);
+    const isEdit = Boolean(1);
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
-                {isEdit
-                    ? t('Редактирование статьи с ID=') + id
-                    : t('Создание новой статьи')}
-            </Page>
-        </DynamicModuleLoader>
+        // <DynamicModuleLoader>
+        <div className={classNames(cls.ArticleEditPage, {}, [className])}>
+            {isEdit
+                ? t('Редактирование статьи с ID=') + id
+                : t('Создание новой статьи')}
+        </div>
+        // </DynamicModuleLoader>
     );
 };
 export default memo(ArticleEditPage);

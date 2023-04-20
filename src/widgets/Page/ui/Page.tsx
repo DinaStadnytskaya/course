@@ -40,7 +40,6 @@ export const Page = (props: PageProps) => {
         dispatch(saveScrollActions.setScrollPosition({
             position: e.currentTarget.scrollTop,
             path: pathname,
-
         }));
     }, 500);
     return (
