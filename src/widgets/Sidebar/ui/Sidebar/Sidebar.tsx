@@ -12,7 +12,7 @@ import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 interface SidebarProps {
     className?: string;
 }
-const Sidebar = memo(({ className }: SidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
     const sidebarItemsList = useSelector(getSidebarItems);
     const toggle = () => {
@@ -53,4 +53,3 @@ const Sidebar = memo(({ className }: SidebarProps) => {
         </div>
     );
 });
-export default Sidebar;
