@@ -1,0 +1,52 @@
+.ListBox {
+    position: relative;
+}
+
+.ListLabel {
+    font-size: var(--font-size-l);
+}
+
+.ListTrigger {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ListButton {
+    background-color: var(--inverted-bg-color);
+    padding: 0px 10px;
+    border-radius: 4px;
+    color: var(--inverted-primary-color);
+    border: 2px solid var(--border-color);
+    box-shadow: 4px 4px 8px var(--box-shadow-color);
+}
+
+.ListOptions {
+    position: absolute;
+    z-index: 10000;
+    min-width: 100%;
+    background-color: var(--inverted-bg-color);
+    padding: 0px 12px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px var(--box-shadow-color);
+}
+
+.ListOption {
+    color: var(--inverted-primary-color);
+    font-size: var(--font-size-l);
+}
+
+.active {
+    filter:brightness(50%);
+}
+
+.disabled {
+    opacity: 0.7;
+}
+
+.optionsTop {
+    bottom: 100%;
+}
+

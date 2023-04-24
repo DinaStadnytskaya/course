@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Select } from 'shared/ui/Select/Select';
 import { memo, useCallback } from 'react';
+import { ListBox } from 'shared/ui/ListBox';
 import { Country } from '../model/types/country';
 
 interface CountrySelectProps {
@@ -29,13 +29,15 @@ export const CountrySelect = memo(({
         onChange?.(value as Country);
     }, [onChange]);
     return (
-        <Select
+        <ListBox
             className={classNames('', {}, [className])}
             label={t('Укажите страну')}
             value={value}
-            options={options}
+            defaultValue={t('Укажите страну')}
+            items={options}
             onChange={onChangeHandler}
             readonly={readonly}
+            direction="bottom"
         />
     );
 });

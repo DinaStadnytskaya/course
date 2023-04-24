@@ -63,6 +63,7 @@
     "eslint-plugin-i18next": "^5.1.2",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-plugin-ds": "^0.0.2",
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
     "file-loader": "^6.2.0",
@@ -89,6 +90,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^0.26.1",
     "i18next": "^21.6.11",
@@ -100,7 +102,8 @@
     "react-icons": "^4.7.1",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
-    "react-spinners": "^0.13.8"
+    "react-spinners": "^0.13.8",
+    "react-virtuoso": "^4.2.2"
   },
   "loki": {
     "configurations": {

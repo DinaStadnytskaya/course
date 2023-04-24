@@ -71,3 +71,9 @@ warningText.args = {
     size: TextSize.XL,
 };
 warningText.decorators = [ThemeDecorator(Theme.DARK)];
+export const SizeL = Template.bind({});
+SizeL.args = {
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
+    size: TextSize.L,
+};
