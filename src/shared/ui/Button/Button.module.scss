@@ -2,9 +2,11 @@
     cursor: pointer;
     transition: all 0.1s linear;
 
-    &:hover {
-        opacity: 0.8;
-        fill-opacity: 0.8;
+    &:hover,
+    &:checked,
+    &:active,
+    &.active {
+        filter: brightness(85%);
     }
 }
 

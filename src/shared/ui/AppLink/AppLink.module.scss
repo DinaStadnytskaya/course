@@ -9,8 +9,7 @@
     &:active,
     &:checked,
     &:focus {
-        opacity: 1;
-        fill-opacity: 1;
+        filter: brightness(85%);
     }
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-tag-spacing */
 import { memo, useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
@@ -8,6 +9,8 @@ import { getAuthUserData, userActions } from 'entities/User';
 import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { MyDropdown } from 'shared/ui/MyDropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -45,23 +48,20 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     </AppLink>
                 </div>
                 <div className={cls.NavbarLinks}>
-                    <AppLink to={RoutePath.article_create}>
-                        <Button
-                            theme={ThemeButton.CLEAR_OUTLINE}
-                            className={cls.NavbarButton}
-                            size={SizeButton.L}
-                        >
-                            {t('Создать статью')}
-                        </Button>
-                    </AppLink>
-                    <Button
-                        theme={ThemeButton.CLEAR_OUTLINE}
-                        className={cls.NavbarButton}
-                        size={SizeButton.L}
-                        onClick={onLogOut}
-                    >
-                        {t('выйти')}
-                    </Button>
+                    <MyDropdown
+                        direction="bottom right"
+                        items={[
+                            {
+                                content: t('Профиль'),
+                                href: RoutePath.profile + authData.id,
+                            },
+                            {
+                                content: t('Выйти'),
+                                onClick: onLogOut,
+                            },
+                        ]}
+                        trigger={<Avatar size={40} src={authData.avatar} />}
+                    />
                 </div>
             </header>
         );

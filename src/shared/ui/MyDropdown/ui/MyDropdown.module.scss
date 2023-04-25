@@ -1,0 +1,81 @@
+.MyDropdown {
+    width: 150px;
+    position: relative;
+}
+
+.MenuButton {
+    margin-right: auto;
+    background: none;
+    outline: none;    
+    padding: 0;
+    border: none;
+    color: var(--applink-color);
+    cursor: pointer;
+}
+
+.MenuItems {
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    border-radius: 4px;
+    background-color: var(--inverted-bg-color);
+    box-shadow: 4px 4px 8px var(--box-shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0;
+    padding: 0;
+
+    & a {
+        padding: 0;
+    }
+}
+
+.MenuItemButton {
+    width: 150px;
+    padding: 5px 20px 5px 10px;
+    background: none;
+    outline: none;
+    text-decoration: none;
+    color: var(--applink-color);
+    cursor: pointer;
+    text-align: start;
+    margin: 0;
+    border: none;
+}
+
+// .MenuItemLink {
+//     width: 100%;
+//     padding: 5px auto 5px 10px;
+//     background: none;
+//     text-decoration: none;
+//     color: var(--applink-color);
+//     cursor: pointer;
+//     text-align: start;
+//     border: none;
+//     margin: 0px;
+// }
+
+.active {
+    filter: brightness(85%);
+}
+
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.optionsTopRight {
+    bottom: 100%;
+    left: 0;
+}
+
+.optionsTopLeft {
+    right: 0;
+    bottom: 100%;
+}

@@ -10,22 +10,19 @@
 
 .NavbarLogo,
 .NavbarLinks {
+    height: 100%;
+    min-width: 150px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     column-gap: 20px;
 }
 
-.links {
-    margin-left: auto;
-    width: 300px;
-}
-
-.mainLink {
-    margin-right: 30px;
-}
-
 .NavbarButton {
-    padding: 5px 10px;
-    border-radius: 12px;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+.active {
+    filter: contrast(90%);
 }

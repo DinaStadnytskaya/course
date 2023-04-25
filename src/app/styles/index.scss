@@ -11,11 +11,13 @@
     height: 100%;
     overflow: hidden;
     font-family: inherit;
+    font-family: var(--font-family-main);
 }
 
 .content-page {
     flex: 1 1 auto;
     display: flex;
+    font-family: var(--font-family-main);
 }
 
 /* Работает в Firefox */

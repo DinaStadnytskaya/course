@@ -16,7 +16,7 @@
 
 .ListButton {
     background-color: var(--inverted-bg-color);
-    padding: 0px 10px;
+    padding: 0 10px;
     border-radius: 4px;
     color: var(--inverted-primary-color);
     border: 2px solid var(--border-color);
@@ -28,7 +28,7 @@
     z-index: 10000;
     min-width: 100%;
     background-color: var(--inverted-bg-color);
-    padding: 0px 12px;
+    padding: 0 12px;
     border-radius: 4px;
     box-shadow: 4px 4px 8px var(--box-shadow-color);
 }
@@ -39,14 +39,29 @@
 }
 
 .active {
-    filter:brightness(50%);
+    filter: brightness(50%);
 }
 
 .disabled {
     opacity: 0.7;
 }
 
-.optionsTop {
-    bottom: 100%;
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
 }
 
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.optionsTopRight {
+    bottom: 100%;
+    left: 0;
+}
+
+.optionsTopLeft {
+    right: 0;
+    bottom: 100%;
+}
