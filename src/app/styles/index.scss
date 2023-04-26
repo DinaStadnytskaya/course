@@ -8,14 +8,15 @@
     background-color: var(--bg-color);
     font: var(--font-m);
     color: var(--primary-color);
-    height: 100%;
+
     overflow: hidden;
     font-family: inherit;
     font-family: var(--font-family-main);
 }
 
 .content-page {
-    flex: 1 1 auto;
+    height: calc(100vh - var(--navbar-height));
+    width: 100%;
     display: flex;
     font-family: var(--font-family-main);
 }
