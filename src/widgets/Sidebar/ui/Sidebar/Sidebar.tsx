@@ -11,10 +11,10 @@ import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 
 interface SidebarProps {
-    className?: string;
+    className?: string
 }
 export const Sidebar = memo(({ className }: SidebarProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
     const [collapsed, setCollapsed] = useState(false);
     const sidebarItemsList = useSelector(getSidebarItems);
     const toggle = () => {
@@ -37,7 +37,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 data-testid="sidebar-btn"
                 type="button"
                 onClick={toggle}
-                className={cls.collapseBtn}
+                className={cls.collapsedBtn}
                 theme={ThemeButton.BACKGROUND_INVERTED}
                 size={SizeButton.XXL}
                 square

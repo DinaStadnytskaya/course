@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
 import { DynamicModuleLoader, ReducersList }
     from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
@@ -53,7 +53,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
             reducers={initialReducers}
         >
             <div className={classNames(cls.LoginForm, {}, [className])}>
-                <Text title={t('Форма авторизации!')} theme={TextTheme.PRIMARY} />
+                <Text title={t('Форма авторизации!')} theme={TextTheme.PRIMARY} size={TextSize.M} />
                 {error && (
                     <Text
                         theme={TextTheme.ERROR}

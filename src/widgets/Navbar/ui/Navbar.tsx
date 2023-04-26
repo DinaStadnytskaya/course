@@ -11,6 +11,7 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { MyDropdown } from 'shared/ui/MyDropdown';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { HStack } from 'shared/ui/Stack';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -60,7 +61,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                                 onClick: onLogOut,
                             },
                         ]}
-                        trigger={<Avatar size={40} src={authData.avatar} />}
+                        trigger={(
+                            <HStack gap="16">
+                                <Avatar size={40} src={authData.avatar} />
+                                {authData.username}
+                            </HStack>
+                        )}
                     />
                 </div>
             </header>
