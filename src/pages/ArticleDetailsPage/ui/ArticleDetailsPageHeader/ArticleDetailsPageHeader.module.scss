@@ -4,10 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: var(--font-size-m);
 }
 
 .ArticleDetailsEditButton,
 .ArticleDetailsPageButton {
     padding: 5px 20px;
     border-radius: 4px;
+    font-size: var(--font-size-m);
 }

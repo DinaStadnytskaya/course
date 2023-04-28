@@ -31,7 +31,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         view,
         target,
     } = props;
-
+    console.log(article);
     const types = <Text text={article.type.join(',')} className={cls.ArticleTypes} />;
     const views = (
         <div className={cls.ArticleElement}>
@@ -102,7 +102,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         >
             <div className={cls.SkeletonWrapper}>
                 <AppLink
-                    to={`${RoutePath.profile}${article.user.id}`}
+                    to={RoutePath.profile + article.user.id}
                 >
                     <Avatar size={50} src={article.user.avatar} />
                 </AppLink>
@@ -127,7 +127,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     />
                 </AppLink>
             </Card>
-
         </div>
 
     );

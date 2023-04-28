@@ -1,0 +1,15 @@
+.ArticleRecommendationsList {}
+
+.ArticleDetailsTitle {
+    margin-bottom: 20px;
+}
+
+.ArticleDetailsList {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}

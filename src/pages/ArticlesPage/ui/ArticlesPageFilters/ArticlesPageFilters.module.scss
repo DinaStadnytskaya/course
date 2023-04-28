@@ -1,5 +1,5 @@
 .ArticlesPageFilters {
-    width: 1200px;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -11,7 +11,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .FiltersSearch {
@@ -23,4 +23,8 @@
     &:hover {
         transform: none;
     }
+}
+
+.FiltersSortSelector {
+    margin-right: auto;
 }

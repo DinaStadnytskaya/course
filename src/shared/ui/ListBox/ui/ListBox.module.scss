@@ -3,7 +3,7 @@
 }
 
 .ListLabel {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
 }
 
 .ListTrigger {
@@ -21,6 +21,7 @@
     color: var(--inverted-primary-color);
     border: 2px solid var(--border-color);
     box-shadow: 4px 4px 8px var(--box-shadow-color);
+    font-size: var(--font-size-m);
 }
 
 .ListOptions {
@@ -35,7 +36,7 @@
 
 .ListOption {
     color: var(--inverted-primary-color);
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
 }
 
 .active {

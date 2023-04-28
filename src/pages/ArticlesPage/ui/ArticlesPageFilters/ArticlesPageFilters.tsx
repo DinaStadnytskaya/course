@@ -84,6 +84,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
             </Card>
             <div className={cls.FiltersBlock}>
                 <ArticleSortSelector
+                    className={cls.FiltersSortSelector}
                     order={order}
                     sort={sort}
                     onChangeOrder={onChangeOrder}

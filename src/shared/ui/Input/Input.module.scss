@@ -9,7 +9,7 @@
     flex: 0 1 auto;
     padding: 0;
     white-space: nowrap;
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
     color: var(--inverted-secondary-color);
 }
 
@@ -22,7 +22,7 @@
     color: transparent;
     text-shadow: 0 0 0 var(--inverted-secondary-color);
     white-space: wrap;
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
 
     &:focus {
         border: none;

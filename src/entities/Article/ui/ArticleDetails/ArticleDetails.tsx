@@ -110,7 +110,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     title={article?.title}
                     text={article?.subtitle}
                     align={TextAlign.LEFT}
-                    size={TextSize.XL}
+                    size={TextSize.S}
                 />
                 <div className={cls.TextWrapper}>
                     <ImEye />
@@ -118,7 +118,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                         theme={TextTheme.PRIMARY}
                         align={TextAlign.LEFT}
                         text={String(article?.views)}
-                        size={TextSize.M}
+                        size={TextSize.S}
                     />
                 </div>
                 <div className={cls.TextWrapper}>
@@ -127,7 +127,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                         theme={TextTheme.PRIMARY}
                         align={TextAlign.LEFT}
                         text={article?.createdAt}
-                        size={TextSize.M}
+                        size={TextSize.S}
                     />
                 </div>
                 {article?.blocks.map(renderBlock)}
