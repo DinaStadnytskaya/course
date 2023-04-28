@@ -43,12 +43,12 @@ export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps
             </div>
             <Card className={cls.ArticleCard}>
                 <div className={cls.ArticleImageWrapper}>
-                    <Skeleton width={300} height={200} className={cls.ArticleImageSmall} />
+                    <Skeleton width="100%" height={200} className={cls.ArticleImageSmall} />
                 </div>
                 <div className={cls.ArticleInfo}>
-                    <Skeleton width={300} height={22} />
+                    <Skeleton width="100%" height={22} />
                 </div>
-                <Skeleton width={300} height={60} className={cls.ArticleTitle} />
+                <Skeleton width="100%" height={60} className={cls.ArticleTitle} />
             </Card>
         </div>
     );
