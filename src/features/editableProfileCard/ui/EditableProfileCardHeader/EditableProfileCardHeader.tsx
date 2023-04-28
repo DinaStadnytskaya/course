@@ -15,12 +15,12 @@ import {
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getAuthUserData } from 'entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import cls from './EditableProfileCardHeader.module.scss';
 
-interface ProfilePageHeaderProps {
+interface EditableProfileCardHeaderProps {
     className?: string
 }
-export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
+export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps) => {
     const { t } = useTranslation('profile');
     const { className } = props;
     const authData = useSelector(getAuthUserData);
@@ -41,7 +41,7 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <div className={classNames(cls.EditableProfileCardHeader, {}, [className])}>
             {canEdit && (
                 <div className={cls.ButtonsWrapper}>
                     {readonly ? (

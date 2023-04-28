@@ -1,6 +1,3 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable i18next/no-literal-string */
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -27,7 +24,7 @@ export const ArticleTextBlockComponent = memo((props: ArticleTextBlockComponentP
                 <Text
                     title={block.title}
                     className={cls.TextBlockTitle}
-                    size={TextSize.M}
+                    size={TextSize.S}
                     theme={TextTheme.PRIMARY}
                     align={TextAlign.LEFT}
                 />
@@ -37,7 +34,7 @@ export const ArticleTextBlockComponent = memo((props: ArticleTextBlockComponentP
                     key={paragraph}
                     text={paragraph}
                     className={cls.TextBlockParagraph}
-                    size={TextSize.M}
+                    size={TextSize.S}
                     theme={TextTheme.PRIMARY}
                     align={TextAlign.LEFT}
                 />

@@ -5,7 +5,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { ArticleInfiniteList } from './ArticleInfiniteList';
 
 export default {
-    title: 'pages/ArticlesPage/ArticleInfiniteList',
+    title: 'page/ArticlesPage/ArticleInfiniteList',
     component: ArticleInfiniteList,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -18,4 +18,3 @@ Normal.decorators = [StoreDecorator({})];
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
-export const NoAuth = Template.bind({});

@@ -12,22 +12,3 @@
     object-fit: contain;
     object-position: center;
 }
-
-.ProfileWrapper {
-    padding: 0;
-    height: 100%;
-    width: 474px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 60px;
-    position: relative;
-
-    .ErrorBlock {
-        width: auto;
-        position: absolute;
-        bottom: 30px;
-        margin: 0 auto;
-    }
-}

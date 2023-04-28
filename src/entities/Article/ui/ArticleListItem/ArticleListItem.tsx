@@ -31,7 +31,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         view,
         target,
     } = props;
-    console.log(article);
     const types = <Text text={article.type.join(',')} className={cls.ArticleTypes} />;
     const views = (
         <div className={cls.ArticleElement}>
