@@ -18,7 +18,7 @@ export default {
     moduleDirectories: ['node_modules'],
     modulePaths: ['<rootDir>src'],
     testMatch: [
-    // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
+        // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
     rootDir: '../../',
@@ -28,6 +28,15 @@ export default {
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
         // 'entities/(.*)': '<rootDir>src/entities/$1',
     },
+    reporters: [
+        'default',
+        ['jest-html-reporters', {
+            publicPath: '<rootDir>/reports/unit',
+            filename: 'report.html',
+            openReport: true,
+            inlineSource: true,
+        }],
+    ],
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
