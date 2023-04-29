@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/Theme';
@@ -18,10 +19,3 @@ Normal.decorators = [StoreDecorator({})];
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
-export const NoAuth = Template.bind({});
-NoAuth.args = {};
-NoAuth.decorators = [
-    StoreDecorator({
-        user: {},
-    }),
-];

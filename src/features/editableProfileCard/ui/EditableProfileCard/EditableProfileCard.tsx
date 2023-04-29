@@ -26,8 +26,8 @@ import cls from './EditableProfileCard.module.scss';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
 interface EditableProfileCardProps {
-    className?: string
-    id: string
+    className?: string;
+    id?: string;
 }
 const initialReducers: ReducersList = {
     profile: profileReducer,

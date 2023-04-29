@@ -17,17 +17,7 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
-    const { t } = useTranslation('profile');
     const { id } = useParams<{ id: string }>();
-    if (!id) {
-        return (
-            <Text
-                theme={TextTheme.DANGER}
-                size={TextSize.L}
-                title={t('Профиль не найден!')}
-            />
-        );
-    }
     return (
         <Page
             className={classNames(
