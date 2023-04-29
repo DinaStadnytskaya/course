@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
@@ -25,8 +26,8 @@ import cls from './EditableProfileCard.module.scss';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
 interface EditableProfileCardProps {
-    className?: string;
-    id: string;
+    className?: string
+    id: string
 }
 const initialReducers: ReducersList = {
     profile: profileReducer,
@@ -111,6 +112,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                             key={err}
                             theme={TextTheme.ERROR}
                             text={validateErrorTranslates[err]}
+                            data-testid={'EditableProfileCard.Error'}
                         />
                     ))}
                 </div>

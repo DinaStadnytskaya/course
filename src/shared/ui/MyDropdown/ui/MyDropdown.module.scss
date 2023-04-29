@@ -1,5 +1,5 @@
 .MyDropdown {
-    width: 150px;
+    min-width: 150px;
     position: relative;
 }
 
@@ -11,6 +11,11 @@
     border: none;
     color: var(--applink-color);
     cursor: pointer;
+    font-size: var(--font-size-m);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .MenuItems {
@@ -42,19 +47,9 @@
     text-align: start;
     margin: 0;
     border: none;
+    font-size: var(--font-size-s);
+    white-space: nowrap;
 }
-
-// .MenuItemLink {
-//     width: 100%;
-//     padding: 5px auto 5px 10px;
-//     background: none;
-//     text-decoration: none;
-//     color: var(--applink-color);
-//     cursor: pointer;
-//     text-align: start;
-//     border: none;
-//     margin: 0px;
-// }
 
 .active {
     filter: brightness(85%);

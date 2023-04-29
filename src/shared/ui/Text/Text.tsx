@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable quotes */
+/* eslint-disable react/jsx-curly-brace-presence */
 import { memo } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
@@ -30,6 +32,8 @@ interface TextProps {
     theme?: TextTheme;
     align?: TextAlign;
     size?: TextSize;
+    'data-testid'?: string;
+
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4';
@@ -49,6 +53,7 @@ export const Text = memo((props: TextProps) => {
         theme = TextTheme.PRIMARY,
         size = TextSize.S,
         align = TextAlign.LEFT,
+        'data-testid': dataTestId = 'Text',
     } = props;
     const HeaderTag = mapSizeToHeaderTag[size];
 
@@ -61,13 +66,19 @@ export const Text = memo((props: TextProps) => {
         <div className={classNames(cls.Text, mods, [className])}>
             {title
                 && (
-                    <HeaderTag className={cls.title}>
+                    <HeaderTag
+                        className={cls.title}
+                        data-testid={`S{dataTestId}.Header`}
+                    >
                         {title}
                     </HeaderTag>
                 )}
             {text
                 && (
-                    <p className={cls.text}>
+                    <p
+                        className={cls.text}
+                        data-testid={`S{dataTestId}.Paragraph`}
+                    >
                         {text}
                     </p>
                 )}

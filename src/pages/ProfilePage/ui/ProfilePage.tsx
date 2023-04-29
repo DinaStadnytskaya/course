@@ -41,7 +41,6 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                 <EditableProfileCard id={id} />
             </VStack>
         </Page>
-
     );
 };
 export default memo(ProfilePage);

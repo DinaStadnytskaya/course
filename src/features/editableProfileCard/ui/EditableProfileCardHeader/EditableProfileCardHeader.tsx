@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable react/jsx-no-useless-fragment */
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -47,8 +48,9 @@ export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps)
                     {readonly ? (
                         <Button
                             theme={ThemeButton.OUTLINE}
-                            className={cls.editBtn}
+                            className={cls.EditBtn}
                             onClick={onEdit}
+                            data-testid={'EditableProfileCardHeader.EditBtn'}
                         >
                             {t('редактировать')}
                         </Button>
@@ -58,13 +60,15 @@ export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps)
                                 theme={ThemeButton.OUTLINE_RED}
                                 className={cls.editBtn}
                                 onClick={onCancelEdit}
+                                data-testid={'EditableProfileCardHeader.CancelBtn'}
                             >
                                 {t('отменить')}
                             </Button>
                             <Button
                                 theme={ThemeButton.OUTLINE}
-                                className={cls.saveBtn}
+                                className={cls.SaveBtn}
                                 onClick={onSave}
+                                data-testid={'EditableProfileCardHeader.SaveBtn'}
                             >
                                 {t('сохранить')}
                             </Button>

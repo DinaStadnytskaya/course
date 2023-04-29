@@ -5,9 +5,14 @@ import { useTranslation } from 'react-i18next';
 import { LoginModal } from 'features/AuthByUsername';
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAuthUserData, userActions } from 'entities/User';
+import {
+    getAuthUserData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
+} from 'entities/User';
 import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { MyDropdown } from 'shared/ui/MyDropdown';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
@@ -23,6 +28,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const dispatch = useDispatch();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getAuthUserData);
+    const isAdmin = useSelector(isUserAdmin);
+    const isManager = useSelector(isUserManager);
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
     }, []);
@@ -36,6 +43,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         },
         [dispatch, onCloseModal],
     );
+    const isAdminPanelAvailable = isAdmin || isManager;
     if (authData) {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
@@ -49,9 +57,20 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     </AppLink>
                 </div>
                 <div className={cls.NavbarLinks}>
+                    <AppLink
+                        to={RoutePath.article_create}
+                        theme={AppLinkTheme.SECONDARY}
+                        className={cls.createBtn}
+                    >
+                        {t('Создать статью')}
+                    </AppLink>
                     <MyDropdown
                         direction="bottom right"
                         items={[
+                            ...(isAdminPanelAvailable ? [{
+                                content: t('Админка'),
+                                href: RoutePath.admin_panel,
+                            }] : []),
                             {
                                 content: t('Профиль'),
                                 href: RoutePath.profile + authData.id,
@@ -64,7 +83,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                         trigger={(
                             <HStack gap="16">
                                 <Avatar size={40} src={authData.avatar} />
-                                {authData.username}
+                                <span >{authData.username}</span>
                             </HStack>
                         )}
                     />

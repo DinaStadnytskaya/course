@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { EditableProfileCardSchema } from '../types/editableProfileCardSchema';
 
 const initialState: EditableProfileCardSchema = {
-    
+
 };
 
 export const editableProfileCardSlice = createSlice({
@@ -10,7 +10,7 @@ export const editableProfileCardSlice = createSlice({
     initialState,
     reducers: {
         template: (state, action: PayloadAction<string>) => {
-           
+
         },
     },
     // extraReducers: (builder) => {

@@ -1085,28 +1085,37 @@
       "id": "1",
       "username": "Denah",
       "password": "123",
-      "role": "ADMIN",
+      "roles": [
+        "ADMIN",
+        "MANAGER"
+      ],
       "avatar": "https://koshka.top/uploads/posts/2021-12/1638931829_1-koshka-top-p-koshek-na-avatarku-1.jpg"
     },
     {
       "id": "2",
       "username": "Alexa",
       "password": "124",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://bipbap.ru/wp-content/uploads/2021/09/51-8.jpg"
     },
     {
       "id": "3",
       "username": "Betsy",
       "password": "125",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://ava-24.com/_ph/23/282920692.jpg"
     },
     {
       "id": "4",
       "username": "Cindy",
       "password": "126",
-      "role": "USER",
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://cspromogame.ru//storage/upload_images/avatars/4245.jpg"
     }
   ],

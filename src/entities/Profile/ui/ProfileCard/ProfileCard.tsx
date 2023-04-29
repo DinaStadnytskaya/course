@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable i18next/no-literal-string */
 /* eslint-disable no-unused-vars */
 import { useTranslation } from 'react-i18next';
@@ -82,12 +83,14 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     value={data?.firstname}
                     onChange={onChangeFirstname}
                     readonly={readonly}
+                    data-testid={'ProfileCard.firstname'}
                 />
                 <Input
                     placeholder={t('Ваша фамилия')}
                     value={data?.lastname}
                     onChange={onChangeLastname}
                     readonly={readonly}
+                    data-testid={'ProfileCard.lastname'}
                 />
                 <Input
                     value={data?.age}
