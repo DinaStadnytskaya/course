@@ -1,10 +1,11 @@
 import { screen } from '@testing-library/react';
-import { componentRender } from 'shared/lib/componentRender/componentRender';
+
 import { Profile, profileReducer } from 'entities/Profile';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import userEvent from '@testing-library/user-event';
 import { $api } from 'shared/api/api';
+import { componentRender } from 'shared/lib/componentRender/componentRender';
 import { EditableProfileCard } from './EditableProfileCard';
 
 const profile: Profile = {
