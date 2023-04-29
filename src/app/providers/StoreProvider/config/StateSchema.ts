@@ -6,14 +6,11 @@ import {
     ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { CombinedState } from 'redux';
-import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
-import { ArticleDetailsCommentsSchema, RecommendationsSchema }
-    from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/AddNewComment';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { SaveScrollSchema } from 'features/SavesScroll';
@@ -21,7 +18,6 @@ import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types';
 import { rtkApi } from 'shared/api/rtkApi';
 
 export interface StateSchema {
-  counter: CounterSchema;
   user: UserSchema;
   savescroll: SaveScrollSchema;
   [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
