@@ -18,10 +18,3 @@ Normal.decorators = [StoreDecorator({})];
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
-export const NoAuth = Template.bind({});
-NoAuth.args = {};
-NoAuth.decorators = [
-    StoreDecorator({
-        user: {},
-    }),
-];
