@@ -13,7 +13,6 @@ import { HStack } from 'shared/ui/Stack';
 
 import { getAuthUserData } from 'entities/User';
 import { AvatarDropdown } from 'features/AvatarDropdown';
-
 import cls from './Navbar.module.scss';
 import { NotificationButton } from "features/notificationButton";
 
