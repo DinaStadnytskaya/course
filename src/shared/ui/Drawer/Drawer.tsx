@@ -1,37 +1,39 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-import {
-    ReactNode,
-} from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { Portal } from 'shared/ui/Portal/Portal';
-import { Overlay } from 'shared/ui/Overlay/Overlay';
-import { useModal } from 'shared/lib/hooks/useModal/useModal';
+import React, { memo, ReactNode } from 'react';
 import { useTheme } from 'app/providers/Theme';
-import cls from './Modal.module.scss';
+import { useModal } from 'shared/lib/hooks/useModal/useModal';
+import { Overlay } from 'shared/ui/Overlay/Overlay';
+import cls from './Drawer.module.scss';
+import { Portal } from '../Portal/Portal';
 
-interface ModalProps {
+interface DrawerProps {
     className?: string;
-    children?: ReactNode;
+    children: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
     lazy?: boolean;
 }
-const ANIMATION_DELAY = 300;
 
-export const Modal = (props: ModalProps) => {
+export const Drawer = memo((props: DrawerProps) => {
     const {
         className,
         children,
-        isOpen,
         onClose,
+        isOpen,
         lazy,
     } = props;
+
     const {
         close,
         isClosing,
         isMounted,
-    } = useModal({ animationDelay: ANIMATION_DELAY, onClose, isOpen });
+    } = useModal({
+        animationDelay: 300,
+        onClose,
+        isOpen,
+    });
     const { theme } = useTheme();
+
     const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
@@ -41,12 +43,14 @@ export const Modal = (props: ModalProps) => {
     }
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className, theme])}>
+            <div className={classNames(cls.Drawer, mods, [className, theme, 'app_drawer'])}>
                 <Overlay onClick={close} />
-                <div className={cls.content}>
+                <div
+                    className={cls.content}
+                >
                     {children}
                 </div>
             </div>
         </Portal>
     );
-};
+});

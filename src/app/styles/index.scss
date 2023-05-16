@@ -5,7 +5,8 @@
 @import "./themes/dark";
 @import "./themes/home";
 
-.app {
+.app,
+.app_drawer {
     background-color: var(--bg-color);
     font: var(--font-m);
     color: var(--primary-color);

@@ -1,3 +1,5 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable i18next/no-literal-string */
 import { memo, useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -8,9 +10,10 @@ import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { HStack } from 'shared/ui/Stack';
-import { NotificationButton } from 'features/NotificationButton';
+
 import { getAuthUserData } from 'entities/User';
 import { AvatarDropdown } from 'features/AvatarDropdown';
+import { NotificationButton } from 'features/notificationButton';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {

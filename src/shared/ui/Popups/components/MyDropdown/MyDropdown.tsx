@@ -3,6 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Fragment, ReactNode } from 'react';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { DropdownDirection } from 'shared/types/ui';
+import { Button } from 'shared/ui/Button/Button';
 import cls from './MyDropdown.module.scss';
 import popupCls from '../../styles/Popupstyle.module.scss';
 
@@ -43,14 +44,13 @@ export function MyDropdown(props: MyDropdownProps) {
             <Menu.Items className={classNames(cls.MenuItems, {}, menuClasses)}>
                 {items.map((item) => {
                     const content = ({ active }: { active: boolean }) => (
-                        <button
-                            type="button"
+                        <Button
                             disabled={item.disabled}
                             onClick={item.onClick}
                             className={classNames(cls.MenuItemButton, { [popupCls.active]: active })}
                         >
                             {item.content}
-                        </button>
+                        </Button>
                     );
                     if (item.href) {
                         return (
