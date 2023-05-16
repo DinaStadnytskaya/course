@@ -2,7 +2,6 @@ import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Popover } from 'shared/ui/Popups';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { FaRegBell } from 'react-icons/fa';
 import { NotificationList } from 'entities/Notification';
 import { BrowserView, MobileView } from 'react-device-detect';
