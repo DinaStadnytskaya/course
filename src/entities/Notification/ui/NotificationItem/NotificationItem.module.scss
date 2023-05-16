@@ -1,0 +1,16 @@
+.NotificationLink {
+    text-decoration: none;
+}
+
+.NotificationLink:hover {
+    filter: brightness(90%);
+    text-decoration: auto;
+    transition: all .3s linear;
+}
+
+.NotificationItem {
+    width: 480px;
+    padding: 10px;
+    min-height: 100px;
+    border-radius: 8px;
+}

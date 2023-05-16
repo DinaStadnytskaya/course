@@ -5,19 +5,14 @@ import { Button } from 'shared/ui/Button/Button';
 import { HStack } from 'shared/ui/Stack';
 import { DropdownDirection } from 'shared/types/ui';
 import cls from './ListBox.module.scss';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/Popupstyle.module.scss';
 
 export interface ListBoxItem {
     value: string;
     content: ReactNode;
     disabled?: boolean;
 }
-
-const mapDirectionClass: Record<DropdownDirection, string> = {
-    'bottom left': cls.optionsBottomLeft,
-    'bottom right': cls.optionsBottomRight,
-    'top right': cls.optionsTopRight,
-    'top left': cls.optionsTopLeft,
-};
 
 interface ListBoxProps {
     items?: ListBoxItem[];
@@ -49,11 +44,11 @@ export function ListBox(props: ListBoxProps) {
             <HListBox
                 disabled={readonly}
                 as="div"
-                className={classNames(cls.ListBox, {}, [className])}
+                className={classNames(cls.ListBox, {}, [className, popupCls.popup])}
                 value={value}
                 onChange={onChange}
             >
-                <HListBox.Button disabled={readonly} className={cls.ListTrigger}>
+                <HListBox.Button disabled={readonly} className={popupCls.trigger}>
                     <Button disabled={readonly} className={cls.ListButton}>
                         {value ?? defaultValue}
                     </Button>
@@ -71,8 +66,8 @@ export function ListBox(props: ListBoxProps) {
                                     className={classNames(
                                         cls.ListOption,
                                         {
-                                            [cls.active]: active,
-                                            [cls.disabled]: item.disabled,
+                                            [popupCls.active]: active,
+                                            [popupCls.disabled]: item.disabled,
                                         },
                                     )}
                                 >

@@ -4,6 +4,7 @@ import { Fragment, ReactNode } from 'react';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { DropdownDirection } from 'shared/types/ui';
 import cls from './MyDropdown.module.scss';
+import popupCls from '../../styles/Popupstyle.module.scss';
 
 export interface DropdownItem {
     disabled?: boolean;
@@ -35,10 +36,10 @@ export function MyDropdown(props: MyDropdownProps) {
             className={classNames(
                 cls.MyDropdown,
                 {},
-                [className],
+                [className, popupCls.popup],
             )}
         >
-            <Menu.Button className={cls.MenuButton}>{trigger}</Menu.Button>
+            <Menu.Button className={popupCls.trigger}>{trigger}</Menu.Button>
             <Menu.Items className={classNames(cls.MenuItems, {}, menuClasses)}>
                 {items.map((item) => {
                     const content = ({ active }: { active: boolean }) => (
@@ -46,7 +47,7 @@ export function MyDropdown(props: MyDropdownProps) {
                             type="button"
                             disabled={item.disabled}
                             onClick={item.onClick}
-                            className={classNames(cls.MenuItemButton, { [cls.active]: active })}
+                            className={classNames(cls.MenuItemButton, { [popupCls.active]: active })}
                         >
                             {item.content}
                         </button>

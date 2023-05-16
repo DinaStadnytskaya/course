@@ -1,0 +1,22 @@
+.NotificationButton {}
+
+.NavbarIconWrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.NavbarIcon {
+    fill: var(--applink-color);
+    font-size: 30px;
+}
+
+.NavbarNotificationList {
+    min-height: 150px;
+    max-height: 300px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
