@@ -5,11 +5,13 @@ import { Popover } from 'shared/ui/Popups';
 import { FaRegBell } from 'react-icons/fa';
 import { NotificationList } from 'entities/Notification';
 import { BrowserView, MobileView } from 'react-device-detect';
+import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
 import { Drawer } from 'shared/ui/Drawer/Drawer';
 import cls from './NotificationButton.module.scss';
 
+
 interface NotificationButtonProps {
-className?: string;
+    className?: string;
 }
 export const NotificationButton = memo((props: NotificationButtonProps) => {
     const { t } = useTranslation();
@@ -17,11 +19,11 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const onOpenDrawer = useCallback(() => {
-        setIsOpen(true);
+        setIsOpen(true)
     }, []);
 
     const onCloseDrawer = useCallback(() => {
-        setIsOpen(false);
+        setIsOpen(false)
     }, []);
 
     const trigger = (
@@ -42,10 +44,14 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
             </BrowserView>
             <MobileView>
                 {trigger}
-                <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-                    <NotificationList />
-                </Drawer>
+                <AnimationProvider>
+                    <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+                        <NotificationList />
+                    </Drawer>
+                </AnimationProvider>
             </MobileView>
         </div>
     );
+
 });
+
