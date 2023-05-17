@@ -16,7 +16,8 @@
 .NavbarNotificationList {
     min-height: 150px;
     max-height: 300px;
-    width: 500px;
+    min-width: 320px;
+    max-width: 500px;
     padding: 10px;
     border-radius: 8px;
     overflow-y: auto;

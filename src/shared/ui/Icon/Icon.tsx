@@ -1,5 +1,5 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import React, { memo } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 
 export enum IconFill {

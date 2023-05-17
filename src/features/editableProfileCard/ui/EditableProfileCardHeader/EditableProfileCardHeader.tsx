@@ -3,19 +3,19 @@
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import {
     Text, TextAlign, TextSize, TextTheme,
-} from 'shared/ui/Text/Text';
+} from '@/shared/ui/Text/Text';
 import {
     getProfileData,
     getProfileReadonly,
     profileActions,
     updateProfileData,
-} from 'entities/Profile';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { getAuthUserData } from 'entities/User';
+} from '@/entities/Profile';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { getAuthUserData } from '@/entities/User';
 import cls from './EditableProfileCardHeader.module.scss';
 
 interface EditableProfileCardHeaderProps {

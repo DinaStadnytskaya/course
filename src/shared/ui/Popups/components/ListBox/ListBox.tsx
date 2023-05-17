@@ -1,10 +1,10 @@
 /* eslint-disable react/button-has-type */
 import { Fragment, ReactNode } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { HStack } from 'shared/ui/Stack';
-import { DropdownDirection } from 'shared/types/ui';
-import { Button } from 'shared/ui/Button/Button';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { HStack } from '@/shared/ui/Stack';
+import { DropdownDirection } from '@/shared/types/ui';
+import { Button } from '@/shared/ui/Button/Button';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/Popupstyle.module.scss';
@@ -49,7 +49,7 @@ export function ListBox(props: ListBoxProps) {
                 value={value}
                 onChange={onChange}
             >
-                <HListBox.Button disabled={readonly} className={popupCls.trigger}>
+                <HListBox.Button className={popupCls.trigger}>
                     <Button disabled={readonly} className={cls.ListButton}>
                         {value ?? defaultValue}
                     </Button>

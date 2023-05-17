@@ -9,8 +9,10 @@
 }
 
 .NotificationItem {
-    width: 480px;
+    min-width: 300px;
+    max-width: 480px;
     padding: 10px;
     min-height: 100px;
     border-radius: 8px;
+    white-space: nowrap;
 }

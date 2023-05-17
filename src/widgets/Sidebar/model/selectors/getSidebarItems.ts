@@ -1,10 +1,10 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { getAuthUserData } from 'entities/User';
 import { BsJournalRichtext } from 'react-icons/bs';
 import { GiCaptainHatProfile } from 'react-icons/gi';
 import { MdNotes } from 'react-icons/md';
 import { SiHomebridge } from 'react-icons/si';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { getAuthUserData } from '@/entities/User';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { SidebarItemType } from '../types/sidebar';
 
 export const getSidebarItems = createSelector(

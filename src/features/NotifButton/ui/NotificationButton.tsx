@@ -1,14 +1,14 @@
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Popover } from 'shared/ui/Popups';
 import { FaRegBell } from 'react-icons/fa';
-import { NotificationList } from 'entities/Notification';
 import { BrowserView, MobileView } from 'react-device-detect';
-import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
-import { Drawer } from 'shared/ui/Drawer/Drawer';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Popover } from '@/shared/ui/Popups';
+import { NotificationList } from '@/entities/Notification';
+import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
+import { Drawer } from '@/shared/ui/Drawer/Drawer';
 import cls from './NotificationButton.module.scss';
-
+import { Button } from '@/shared/ui/Button/Button';
 
 interface NotificationButtonProps {
     className?: string;
@@ -19,17 +19,17 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const onOpenDrawer = useCallback(() => {
-        setIsOpen(true)
+        setIsOpen(true);
     }, []);
 
     const onCloseDrawer = useCallback(() => {
-        setIsOpen(false)
+        setIsOpen(false);
     }, []);
 
     const trigger = (
-        <div onClick={onOpenDrawer}>
+        <Button onClick={onOpenDrawer}>
             <FaRegBell className={cls.NavbarIcon} />
-        </div>
+        </Button>
     );
     return (
         <div>
@@ -44,14 +44,10 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
             </BrowserView>
             <MobileView>
                 {trigger}
-                <AnimationProvider>
-                    <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-                        <NotificationList />
-                    </Drawer>
-                </AnimationProvider>
+                <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+                    <NotificationList />
+                </Drawer>
             </MobileView>
         </div>
     );
-
 });
-

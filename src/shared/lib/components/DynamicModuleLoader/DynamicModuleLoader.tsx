@@ -2,9 +2,9 @@
 /* eslint-disable react/jsx-no-useless-fragment */
 import { ReactNode, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
-import { ReduxStoreWithManager, StateSchema, StateSchemaKey }
-    from 'app/providers/StoreProvider/config/StateSchema';
 import { Reducer } from '@reduxjs/toolkit';
+import { ReduxStoreWithManager, StateSchema, StateSchemaKey }
+    from '@/app/providers/StoreProvider/config/StateSchema';
 
 export type ReducersList = {
     // eslint-disable-next-line no-unused-vars

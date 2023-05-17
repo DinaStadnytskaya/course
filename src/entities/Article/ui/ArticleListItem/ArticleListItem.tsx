@@ -2,16 +2,16 @@
 /* eslint-disable react/no-children-prop */
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Text } from 'shared/ui/Text/Text';
 import { ImEye } from 'react-icons/im';
-import { Card } from 'shared/ui/Card';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text } from '@/shared/ui/Text/Text';
+import { Card } from '@/shared/ui/Card';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 
-import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { AppLink } from '@/shared/ui/AppLink/AppLink';
 
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import {
     Article, ArticleTextBlock,
 } from '../../model/types/article';

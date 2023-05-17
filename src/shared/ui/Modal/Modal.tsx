@@ -2,12 +2,11 @@
 import {
     ReactNode,
 } from 'react';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { Portal } from 'shared/ui/Portal/Portal';
-import { Overlay } from 'shared/ui/Overlay/Overlay';
-import { useModal } from 'shared/lib/hooks/useModal/useModal';
-import { useTheme } from 'app/providers/Theme';
-
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { Portal } from '@/shared/ui/Portal/Portal';
+import { Overlay } from '@/shared/ui/Overlay/Overlay';
+import { useModal } from '@/shared/lib/hooks/useModal/useModal';
+import { useTheme } from '@/app/providers/Theme';
 
 import cls from './Modal.module.scss';
 

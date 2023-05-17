@@ -3,18 +3,18 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from
-    'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import {
-    Text, TextAlign, TextSize, TextTheme,
-} from 'shared/ui/Text/Text';
-import { Skeleton } from 'shared/ui/Skeleton';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { ImEye } from 'react-icons/im';
 import { FcCalendar } from 'react-icons/fc';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from
+    '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import {
+    Text, TextAlign, TextSize, TextTheme,
+} from '@/shared/ui/Text/Text';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
@@ -82,7 +82,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             <div className={cls.SceletonWrapper}>
                 <Skeleton className={cls.CircleSceleton} border={'50%'} width={200} height={200} />
                 <Skeleton className={cls.SquareSceleton} border={'0%'} width={300} height={32} />
-                <Skeleton className={cls.SquareSceleton} border={'0%'} width={1200} height={24} />
+                <Skeleton className={cls.SquareSceleton} border={'0%'} width="100%" height={24} />
                 <Skeleton className={cls.SquareSceleton} border={'0%'} width="100%" height={200} />
                 <Skeleton className={cls.SquareSceleton} border={'0%'} width="100%" height={200} />
             </div>

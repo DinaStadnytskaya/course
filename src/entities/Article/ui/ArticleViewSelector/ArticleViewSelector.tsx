@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { classNames } from 'shared/lib/classNames/classNames';
 import { MdOutlineFormatListNumbered } from 'react-icons/md';
 import { AiOutlineBarcode } from 'react-icons/ai';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { memo } from 'react';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '../../model/consts/articleConsts';
 

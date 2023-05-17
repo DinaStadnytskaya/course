@@ -2,13 +2,13 @@
 /* eslint-disable i18next/no-literal-string */
 /* eslint-disable no-unused-vars */
 import { useTranslation } from 'react-i18next';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { Input } from 'shared/ui/Input/Input';
 import { CircleLoader } from 'react-spinners';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Currency, CurrencySelect } from 'entities/Currency';
-import { Country, CountrySelect } from 'entities/Country';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { Text, TextAlign, TextTheme } from '@/shared/ui/Text/Text';
+import { Input } from '@/shared/ui/Input/Input';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Currency, CurrencySelect } from '@/entities/Currency';
+import { Country, CountrySelect } from '@/entities/Country';
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
 

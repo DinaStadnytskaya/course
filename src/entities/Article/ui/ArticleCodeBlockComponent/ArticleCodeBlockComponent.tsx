@@ -1,10 +1,10 @@
 /* eslint-disable i18next/no-literal-string */
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Code } from 'shared/ui/Code';
 import { AiOutlineCopy } from 'react-icons/ai';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Code } from '@/shared/ui/Code';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { ArticleCodeBlock } from '../../model/types/article';
 import cls from './ArticleCodeBlockComponent.module.scss';
 

@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react';
-import { Profile, profileReducer } from 'entities/Profile';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
 import userEvent from '@testing-library/user-event';
-import { $api } from 'shared/api/api';
-import { componentRender } from 'shared/lib/componentrender/componentRender';
+import { Profile, profileReducer } from '@/entities/Profile';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
+import { $api } from '@/shared/api/api';
+import { componentRender } from '@/shared/lib/componentrender/componentRender';
 import { EditableProfileCard } from './EditableProfileCard';
 
 const profile: Profile = {
@@ -63,11 +63,8 @@ describe('features/EditableProfileCard', () => {
     test('Должна появиться ошибка', async () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditBtn'));
-
         await userEvent.clear(screen.getByTestId('ProfileCard.firstname'));
-
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.SaveBtn'));
-
         expect(screen.getByTestId('EditableProfileCard.Error.Paragraph')).toBeInTheDocument();
     });
 

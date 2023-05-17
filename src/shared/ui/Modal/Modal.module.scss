@@ -8,7 +8,7 @@
     left: 0;
     opacity: 0;
     pointer-events: none;
-    z-index: -1;
+    z-index: var(--overlay-z-index);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +25,7 @@
     transition: all 0.3s linear;
     transform: scale(0.5);
     font-size: var(--font-size-l);
+    z-index: var(--modal-z-index);
 }
 
 .opened {

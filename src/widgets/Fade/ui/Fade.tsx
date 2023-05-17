@@ -3,10 +3,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { Component } from 'react';
 import Slider from 'react-slick';
-import Slider2 from 'shared/assets/slider/slider2.png';
-import Slider3 from 'shared/assets/slider/slider3.png';
-import Slider4 from 'shared/assets/slider/slider4.jpg';
-import Slider5 from 'shared/assets/slider/slider5.png';
+import Slider2 from '@/shared/assets/slider/slider2.png';
+import Slider3 from '@/shared/assets/slider/slider3.png';
+import Slider4 from '@/shared/assets/slider/slider4.jpg';
+import Slider5 from '@/shared/assets/slider/slider5.png';
 
 import cls from './Fade.module.scss';
 
