@@ -1,26 +1,22 @@
-import React, { memo } from 'react';
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 
-export enum IconFill {
-    PRIMARY = 'primary',
-    SECONDARY = 'secondary',
-    ADDITIONAL = 'additional'
-}
-
-interface IconProps {
+interface IconProps extends React.SVGProps<SVGSVGElement>{
     className?: string;
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
-    fill?: IconFill;
+    inverted?: boolean;
 }
 
 export const Icon = memo((props: IconProps) => {
-    const { className, Svg, fill = IconFill.PRIMARY } = props;
+    const {
+        className, Svg, inverted, ...otherProps
+    } = props;
 
-    const mods:Mods = {
-        [cls[fill]]: true,
-    };
     return (
-        <Svg className={classNames(cls.Icon, mods, [className])} />
+        <Svg
+            className={classNames(cls.Icon, {}, [className])}
+            {...otherProps}
+        />
     );
 });

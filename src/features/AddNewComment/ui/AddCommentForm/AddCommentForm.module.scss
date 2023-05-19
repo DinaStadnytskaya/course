@@ -1,9 +1,10 @@
 .AddCommentForm {
+    max-width: 1100px;
     width: 100%;
     border: 2px solid var(--primary-color);
     padding: 20px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;   
 }

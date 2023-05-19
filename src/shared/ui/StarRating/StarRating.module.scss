@@ -1,0 +1,19 @@
+.StarIcon {
+    stroke: var(--inverted-bg-color);
+    fill: none;
+    cursor: pointer;
+}
+
+.unhovered {
+    stroke: var(--inverted-bg-color);
+    fill: none;
+}
+
+.hovered {
+    stroke: var(--inverted-secondary-color);
+    fill: var(--secondary-color);
+}
+
+.selected {
+    cursor: auto;
+}

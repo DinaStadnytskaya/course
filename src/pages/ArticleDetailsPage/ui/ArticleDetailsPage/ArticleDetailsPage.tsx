@@ -6,6 +6,7 @@ import { ArticleDetails } from '@/entities/Article';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { Page } from '@/widgets/Page';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
+import { ArticleRating } from '@/features/articleRating';
 import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsPageReducer } from '../../model/slice';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
@@ -22,6 +23,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const { t } = useTranslation('articledetails');
     const { className } = props;
     const { id } = useParams<{ id: string }>();
+    if (!id) {
+        return null;
+    }
     if (!id) {
         return (
             <div className={classNames(cls.ArticleDetailsPage, {}, [
@@ -40,6 +44,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     id={id}
                     className={cls.ArticleDetailsBlock}
                 />
+                <ArticleRating className={cls.ArticleDetailsCard} articleId={id} />
                 <ArticleRecommendationsList />
                 <ArticleDetailsComments id={id} />
             </Page>

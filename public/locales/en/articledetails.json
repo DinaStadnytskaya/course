@@ -1,4 +1,5 @@
 {
+  "Оставьте свой отзыв!": "Leave your review!",
   "Введите ваш комментарий": "Enter your comment",
   "Вернуться к списку": "To come back to the list",
   "Вернуться назад": "To come back",
@@ -23,5 +24,10 @@
   "заголовку": "title",
   "количеству просмотров": "number of views",
   "комментарии": "comments",
-  "убыванию": "descending"
+  "убыванию": "descending",
+  "Оцените статью!": "Rate the article!",
+  "Оставьте свой отзыв о статье, это поможет улучшить качество!": "Leave your feedback about the article, it will help improve the quality!",
+  "Закрыть": "Close",
+  "Отправить": "Send",
+  "Спасибо за оценку!": "Thank you for rating!"
 }
