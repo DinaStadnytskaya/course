@@ -3,7 +3,7 @@ import path from 'path';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../build/types/config';
 
-export default ({ config }: {config: webpack.Configuration}) => {
+export default ({ config }: { config: webpack.Configuration }) => {
     const paths: BuildPaths = {
         build: '',
         html: '',
@@ -18,7 +18,10 @@ export default ({ config }: {config: webpack.Configuration}) => {
     // config.resolve.modules = [path.resolve(__dirname, '../../src'), 'node_modules'];
     config!.resolve!.extensions!.push('.ts', '.tsx');
     // config!.resolve!.alias = { '@': path.resolve(__dirname, '..', '..', 'src') };
-    config!.resolve!.alias = { '@': paths.src };
+    config!.resolve!.alias = {
+        ...config!.resolve!.alias,
+        '@': paths.src,
+    };
     // @ts-ignore
     config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
         if (/svg/.test(rule.test as string)) {

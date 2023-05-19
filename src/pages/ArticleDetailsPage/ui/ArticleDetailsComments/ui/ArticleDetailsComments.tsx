@@ -4,10 +4,11 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { TextSize, Text } from '@/shared/ui/Text/Text';
 import { CommentList } from '@/entities/Comment';
-import { AddCommentForm } from '@/features/AddNewComment';
+
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { PageLoader } from '@/widgets/PageLoader';
+import { AddCommentForm } from '@/features/AddNewComment';
 import cls from './ArticleDetailsComments.module.scss';
 import { addCommentForArticle } from '../../../model/services/addCommentForArticle/addCommentForArticle';
 import { getArticleComments } from '../../../model/slice/articleDetailsCommentsSlice';
