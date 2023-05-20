@@ -1,8 +1,8 @@
 /* eslint-disable i18next/no-literal-string */
 import { memo } from 'react';
 import { Page } from '@/widgets/Page';
-import Fade from '@/widgets/Fade/ui/Fade';
 import cls from './MainPage.module.scss';
+import Fade from '../../../widgets/Fade/ui/Fade';
 
 const MainPage = () => {
     return (

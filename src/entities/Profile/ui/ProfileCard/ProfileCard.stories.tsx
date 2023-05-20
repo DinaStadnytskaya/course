@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ProfileCard } from '@/entities/Profile';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import avatar from './profile.jpg';
+import { ProfileCard } from './ProfileCard';
 
 export default {
     title: 'entities/Profile/ProfileCard',

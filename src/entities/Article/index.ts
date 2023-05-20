@@ -8,3 +8,4 @@ export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelecto
 export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
 export { ArticleSortField } from './model/consts/articleConsts';
 export { ArticleType } from './model/consts/articleConsts';
+export { ArticleBlockType } from './model/consts/articleConsts';

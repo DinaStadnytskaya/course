@@ -1,11 +1,14 @@
 {
-  "Оставьте свой отзыв!": "Leave your review!",
   "Введите ваш комментарий": "Enter your comment",
   "Вернуться к списку": "To come back to the list",
   "Вернуться назад": "To come back",
+  "Закрыть": "Close",
   "Наука": "Science",
   "Новости": "News",
+  "Оставьте свой отзыв о статье, это поможет улучшить качество!": "Leave your feedback about the article, it will help improve the quality!",
+  "Оставьте свой отзыв!": "Leave your review!",
   "Отправить": "Send",
+  "Оцените статью!": "Rate the article!",
   "Ошибка при загрузке статей!": "An error occurred while loading the articles!",
   "По": "By",
   "Поиск": "Search",
@@ -16,6 +19,7 @@
   "Рекомендуем": "Recommend you",
   "Создание новой статьи": "Creation of new article",
   "Сортировать по": "Sort by",
+  "Спасибо за оценку!": "Thank you for rating!",
   "Статьи не найдены!": "Articles were not found!",
   "Статья не найдена": "The article was not found",
   "Читать далее": "To read further",
@@ -24,10 +28,5 @@
   "заголовку": "title",
   "количеству просмотров": "number of views",
   "комментарии": "comments",
-  "убыванию": "descending",
-  "Оцените статью!": "Rate the article!",
-  "Оставьте свой отзыв о статье, это поможет улучшить качество!": "Leave your feedback about the article, it will help improve the quality!",
-  "Закрыть": "Close",
-  "Отправить": "Send",
-  "Спасибо за оценку!": "Thank you for rating!"
+  "убыванию": "descending"
 }

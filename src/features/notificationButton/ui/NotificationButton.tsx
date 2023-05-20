@@ -5,7 +5,6 @@ import { BrowserView, MobileView } from 'react-device-detect';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Popover } from '@/shared/ui/Popups';
 import { NotificationList } from '@/entities/Notification';
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
 import cls from './NotificationButton.module.scss';
 import { Button } from '@/shared/ui/Button/Button';

@@ -8,14 +8,15 @@ import {
 import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 import { UserSchema } from '@/entities/User';
-import { LoginSchema } from '@/features/AuthByUsername';
+
 import { ProfileSchema } from '@/entities/Profile';
 import { ArticleDetailsSchema } from '@/entities/Article';
 import { AddCommentFormSchema } from '@/features/AddNewComment';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { SaveScrollSchema } from '@/features/SavesScroll';
-import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage/model/types';
 import { rtkApi } from '@/shared/api/rtkApi';
+import { LoginSchema } from '@/features/authByUsername';
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 
 export interface StateSchema {
   user: UserSchema;

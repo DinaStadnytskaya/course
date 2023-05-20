@@ -15,8 +15,7 @@ import { Card } from '@/shared/ui/Card';
 
 import { SortOrder } from '@/shared/types';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
-import { ArticleTypeTabs } from '@/entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
-import cls from './ArticlesPageFilters.module.scss';
+
 import {
     getArticlesPageOrder,
     getArticlesPageSearch,
@@ -26,6 +25,8 @@ import {
 } from '../../model/selectors/articlesPageSelectors';
 import { articlesPageActions } from '../../model/slice/articlesPageSlice';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
+import { ArticleTypeTabs } from '../../../../entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
+import cls from './ArticlesPageFilters.module.scss';
 
 interface ArticlesPageFiltersProps {
     className?: string
