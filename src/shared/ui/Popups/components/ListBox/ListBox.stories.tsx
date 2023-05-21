@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { ListBox } from './ListBox';
 
 export default {
@@ -24,8 +23,8 @@ Normal.args = {
     ],
 };
 
-export const topLeft = Template.bind({});
-topLeft.args = {
+export const TopLeft = Template.bind({});
+TopLeft.args = {
     direction: 'top left',
     value: '123',
     items: [
@@ -34,8 +33,8 @@ topLeft.args = {
     ],
 };
 
-export const topRight = Template.bind({});
-topRight.args = {
+export const TopRight = Template.bind({});
+TopRight.args = {
     direction: 'top right',
     value: '123',
     items: [
@@ -44,8 +43,8 @@ topRight.args = {
     ],
 };
 
-export const bottomLeft = Template.bind({});
-bottomLeft.args = {
+export const BottomLeft = Template.bind({});
+BottomLeft.args = {
     direction: 'bottom left',
     value: '123',
     items: [

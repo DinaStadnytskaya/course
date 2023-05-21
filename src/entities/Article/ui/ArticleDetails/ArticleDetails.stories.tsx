@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/Theme';
+
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleDetails } from './ArticleDetails';
 import { Article } from '../../model/types/article';
 import { ArticleBlockType, ArticleType } from '../../model/consts/articleConsts';
+import { Theme } from '../../../../shared/const/theme';
 
 export default {
     title: 'entities/Article/ArticleDetails',

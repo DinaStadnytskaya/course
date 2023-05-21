@@ -1173,7 +1173,7 @@
       "city": "Odessa",
       "age": 45,
       "lastname": "Di",
-      "currency": "EUR",
+      "currency": "USD",
       "country": "Bolgaria",
       "firstname": "Dena"
     },
@@ -1274,6 +1274,12 @@
       "rate": 3,
       "feedback": "",
       "id": "tcD6mC5"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 3,
+      "id": "RjJrRHI"
     }
   ],
   "profile-ratings": [
