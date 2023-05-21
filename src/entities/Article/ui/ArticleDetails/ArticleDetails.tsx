@@ -13,7 +13,7 @@ import {
     Text, TextAlign, TextSize, TextTheme,
 } from '@/shared/ui/Text/Text';
 import { Skeleton } from '@/shared/ui/Skeleton';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Avatar } from '@/shared/ui/Avatar/ui/Avatar/Avatar';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {
     getArticleDetailsData,

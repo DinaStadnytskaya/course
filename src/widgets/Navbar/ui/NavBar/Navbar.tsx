@@ -7,7 +7,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { Button, SizeButton, ThemeButton } from '@/shared/ui/Button/Button';
 import { Text, TextSize, TextTheme } from '@/shared/ui/Text/Text';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/ui/AppLink/AppLink';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
