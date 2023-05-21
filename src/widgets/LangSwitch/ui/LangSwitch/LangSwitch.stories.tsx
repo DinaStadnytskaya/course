@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { LangSwitch } from './LangSwitch';
-import { Theme } from '../../../../shared/const/theme';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'widgets/LangSwitch',

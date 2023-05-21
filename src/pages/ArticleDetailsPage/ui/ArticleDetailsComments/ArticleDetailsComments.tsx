@@ -8,7 +8,7 @@ import { CommentList } from '@/entities/Comment';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { PageLoader } from '@/widgets/PageLoader';
-import { AddCommentForm } from '@/features/addNewComment';
+import { AddCommentFormAsync as AddCommentForm } from '@/features/addNewComment';
 import cls from './ArticleDetailsComments.module.scss';
 import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';

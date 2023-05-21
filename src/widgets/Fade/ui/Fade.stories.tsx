@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import Fade from './Fade';
-import { Theme } from '../../../shared/const/theme';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'widgets/Fade',
