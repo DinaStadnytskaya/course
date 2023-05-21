@@ -57,4 +57,4 @@ const AddCommentForm = (props: AddCommentFormProps) => {
         </DynamicModuleLoader>
     );
 };
-export default memo(AddCommentForm);
+export default AddCommentForm;

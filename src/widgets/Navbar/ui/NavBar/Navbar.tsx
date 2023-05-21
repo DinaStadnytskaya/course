@@ -11,9 +11,10 @@ import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { getAuthUserData } from '@/entities/User';
-import { AvatarDropdown } from '@/features/avatarDropdown';
+
 import cls from './Navbar.module.scss';
 import { LoginModal } from '../../../../features/AuthByUsername';
+import { AvatarDropdown } from '../../../../features/avatarDropdown';
 
 interface NavbarProps {
     className?: string;
