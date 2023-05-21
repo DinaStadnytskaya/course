@@ -11,12 +11,14 @@ import { UserSchema } from '@/entities/User';
 
 import { ProfileSchema } from '@/entities/Profile';
 import { ArticleDetailsSchema } from '@/entities/Article';
-import { AddCommentFormSchema } from '@/features/AddNewComment';
+
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { SaveScrollSchema } from '@/features/SavesScroll';
 import { rtkApi } from '@/shared/api/rtkApi';
-import { LoginSchema } from '@/features/authByUsername';
+
 import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
+import { LoginSchema } from '@/features/AuthByUsername';
+import { AddCommentFormSchema } from '@/features/addNewComment';
 
 export interface StateSchema {
   user: UserSchema;

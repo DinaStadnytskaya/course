@@ -8,12 +8,12 @@ import { CommentList } from '@/entities/Comment';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { PageLoader } from '@/widgets/PageLoader';
+import { AddCommentForm } from '@/features/addNewComment';
 import cls from './ArticleDetailsComments.module.scss';
-import { addCommentForArticle } from '../../../model/services/addCommentForArticle/addCommentForArticle';
-import { getArticleComments } from '../../../model/slice/articleDetailsCommentsSlice';
-import { getArticleCommentsIsLoading } from '../../../model/selectors/comments';
-import { fetchCommentsByArticleId } from '../../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
-import { AddCommentForm } from '@/features/AddNewComment';
+import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
+import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
+import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 
 interface ArticleDetailsCommentsProps {
     className?: string;

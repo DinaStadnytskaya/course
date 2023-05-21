@@ -1,3 +1,4 @@
+/* eslint-disable plugin-ds/public-api-imports */
 /* eslint-disable react/jsx-curly-brace-presence */
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
@@ -14,7 +15,7 @@ import {
     getProfileReadonly,
     getProfileValidateErrors,
     profileActions,
-    profileReducer,
+
 } from '@/entities/Profile';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Currency } from '@/entities/Currency';
@@ -22,6 +23,7 @@ import { Country } from '@/entities/Country';
 import { TextTheme, Text } from '@/shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from
     '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { profileReducer } from '@/entities/Profile/testing';
 import cls from './EditableProfileCard.module.scss';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
