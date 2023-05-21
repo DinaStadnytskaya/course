@@ -4,8 +4,8 @@ import { GiCaptainHatProfile } from 'react-icons/gi';
 import { MdNotes } from 'react-icons/md';
 import { SiHomebridge } from 'react-icons/si';
 import { getAuthUserData } from '@/entities/User';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { SidebarItemType } from '../types/sidebar';
+import { RoutePath } from '@/shared/const/router';
 
 export const getSidebarItems = createSelector(
     getAuthUserData,

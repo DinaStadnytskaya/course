@@ -5,9 +5,9 @@ import { Avatar } from '@/shared/ui/Avatar/ui/Avatar/Avatar';
 import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { AppLink } from '@/shared/ui/AppLink/ui/AppLink/AppLink';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import cls from './CommentCard.module.scss';
 import { Comment } from '../../model/types/comment';
+import { RoutePath } from '@/shared/const/router';
 
 interface CommentCardProps {
     className?: string;
