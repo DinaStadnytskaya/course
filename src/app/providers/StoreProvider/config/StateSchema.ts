@@ -15,7 +15,7 @@ import { SaveScrollSchema } from '@/features/SavesScroll';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { LoginSchema } from '@/features/AuthByUsername';
-import { AddCommentFormSchema } from '@/features/addNewComment';
+import { AddCommentFormSchema } from '@/features/addCommentForm';
 
 export interface StateSchema {
   user: UserSchema;
