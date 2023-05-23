@@ -10,7 +10,7 @@ import {
     ArticleViewSelector,
 } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Input } from '@/shared/ui/Input/Input';
+import { Input } from '@/shared/ui/Input';
 import { Card } from '@/shared/ui/Card';
 
 import { SortOrder } from '@/shared/types';

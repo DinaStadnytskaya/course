@@ -11,9 +11,9 @@ import { DynamicModuleLoader, ReducersList } from
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     Text, TextAlign, TextSize, TextTheme,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 import { Skeleton } from '@/shared/ui/Skeleton';
-import { Avatar } from '@/shared/ui/Avatar/ui/Avatar/Avatar';
+import { Avatar } from '@/shared/ui/Avatar';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {
     getArticleDetailsData,

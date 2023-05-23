@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import { memo, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Input } from '@/shared/ui/Input/Input';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { Input } from '@/shared/ui/Input';
+import { Button, ThemeButton } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     DynamicModuleLoader,

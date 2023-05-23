@@ -4,9 +4,9 @@
 import { useTranslation } from 'react-i18next';
 import { CircleLoader } from 'react-spinners';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { Text, TextAlign, TextTheme } from '@/shared/ui/Text/Text';
-import { Input } from '@/shared/ui/Input/Input';
-import { Avatar } from '@/shared/ui/Avatar/ui/Avatar/Avatar';
+import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
+import { Input } from '@/shared/ui/Input';
+import { Avatar } from '@/shared/ui/Avatar';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { Country, CountrySelect } from '@/entities/Country';
 import cls from './ProfileCard.module.scss';

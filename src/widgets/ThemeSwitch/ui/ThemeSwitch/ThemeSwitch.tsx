@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 import Icon from '@/shared/assets/icons/Icon.svg';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { Button, ThemeButton } from '@/shared/ui/Button';
 import cls from './ThemeSwitch.module.scss';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 

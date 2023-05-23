@@ -20,7 +20,7 @@ import {
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { TextTheme, Text } from '@/shared/ui/Text/Text';
+import { TextTheme, Text } from '@/shared/ui/Text';
 import { DynamicModuleLoader, ReducersList } from
     '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { profileReducer } from '@/entities/Profile/testing';

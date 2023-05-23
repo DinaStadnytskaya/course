@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { MyDropdown } from '@/shared/ui/Popups';
 import { HStack } from '@/shared/ui/Stack';
-import { Avatar } from '@/shared/ui/Avatar/ui/Avatar/Avatar';
+import { Avatar } from '@/shared/ui/Avatar';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     getAuthUserData,

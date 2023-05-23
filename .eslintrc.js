@@ -19,11 +19,13 @@ module.exports = {
         'i18next',
         'react-hooks',
         'plugin-ds',
+        'unused-imports',
     ],
 
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
+        'unused-imports/no-unused-imports': 'error',
         'linebreak-style': 0,
         indent: [2, 4],
         'react/jsx-filename-extension': [2, {

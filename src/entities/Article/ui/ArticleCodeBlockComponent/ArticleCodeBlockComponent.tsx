@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { AiOutlineCopy } from 'react-icons/ai';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Code } from '@/shared/ui/Code';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { Button, ThemeButton } from '@/shared/ui/Button';
 import { ArticleCodeBlock } from '../../model/types/article';
 import cls from './ArticleCodeBlockComponent.module.scss';
 

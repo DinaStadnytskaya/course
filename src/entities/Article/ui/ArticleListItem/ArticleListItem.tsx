@@ -4,12 +4,12 @@ import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ImEye } from 'react-icons/im';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 import { Card } from '@/shared/ui/Card';
-import { Avatar } from '@/shared/ui/Avatar/ui/Avatar/Avatar';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Button, ThemeButton } from '@/shared/ui/Button';
 
-import { AppLink } from '@/shared/ui/AppLink/ui/AppLink/AppLink';
+import { AppLink } from '@/shared/ui/AppLink';
 
 import {
     Article, ArticleTextBlock,

@@ -4,13 +4,13 @@ import { BrowserView, MobileView } from 'react-device-detect';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card } from '@/shared/ui/Card';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
-import { StarRating } from '@/shared/ui/StarRating/StarRating';
-import { Modal } from '@/shared/ui/Modal/Modal';
-import { Input } from '@/shared/ui/Input/Input';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
+import { StarRating } from '@/shared/ui/StarRating';
+import { Modal } from '@/shared/ui/Modal';
+import { Input } from '@/shared/ui/Input';
 import cls from './RatingCard.module.scss';
-import { Button, SizeButton, ThemeButton } from '@/shared/ui/Button/Button';
-import { Drawer } from '@/shared/ui/Drawer/Drawer';
+import { Button, SizeButton, ThemeButton } from '@/shared/ui/Button';
+import { Drawer } from '@/shared/ui/Drawer';
 
 interface RatingCardProps {
     className?: string;
@@ -71,7 +71,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 />
                 <StarRating
                     className={cls.RatingCardRate}
-                    size={50}
+                    size={40}
                     selectedStars={starsCount}
                     onSelect={onSelectStars}
                 />

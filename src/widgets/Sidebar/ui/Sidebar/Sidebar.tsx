@@ -2,7 +2,7 @@ import { memo, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, SizeButton, ThemeButton } from '@/shared/ui/Button/Button';
+import { Button, SizeButton, ThemeButton } from '@/shared/ui/Button';
 
 import { VStack } from '@/shared/ui/Stack';
 import cls from './Sidebar.module.scss';

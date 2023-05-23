@@ -6,7 +6,7 @@ import {
     TextAlign,
     TextSize,
     TextTheme,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 import { ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleTextBlockComponent.module.scss';
 
