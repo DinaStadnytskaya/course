@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Profile } from '@/entities/Profile';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
 import { $api } from '@/shared/api/api';
 import { componentRender } from '@/shared/lib/componentrender/componentRender';
 import { profileReducer } from '@/entities/Profile/testing';
 import { EditableProfileCard } from './EditableProfileCard';
+import { Profile } from '@/entities/Profile';
 
 const profile: Profile = {
     id: '1',
@@ -74,7 +74,7 @@ describe('features/EditableProfileCard', () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditBtn'));
 
-        await userEvent.type(screen.getByTestId('ProfileCard.firstname'), 'admin');
+        await userEvent.type(screen.getByTestId('ProfileCard.firstname'), 'user');
 
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.SaveBtn'));
 

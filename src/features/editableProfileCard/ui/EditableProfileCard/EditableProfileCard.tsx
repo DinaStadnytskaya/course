@@ -20,7 +20,7 @@ import {
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { TextTheme, Text } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { DynamicModuleLoader, ReducersList } from
     '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { profileReducer } from '@/entities/Profile/testing';
@@ -91,9 +91,18 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     }, [dispatch]);
 
     return (
-        <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={initialReducers}>
             <div className={classNames(cls.EditableProfileCard, {}, [className])}>
                 <EditableProfileCardHeader />
+                <div className={cls.ErrorBlock}>
+                    {validateErrors?.length && validateErrors.map((error) => (
+                        <Text
+                            text={validateErrorTranslates[error]}
+                            key={error}
+                            data-testid={'EditableProfileCard.Error'}
+                        />
+                    ))}
+                </div>
                 <ProfileCard
                     data={formData}
                     isLoading={isLoading}
@@ -108,16 +117,6 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                     onChangeCurrency={onChangeCurrency}
                     onChangeCountry={onChangeCountry}
                 />
-                <div className={cls.ErrorBlock}>
-                    {validateErrors?.length && validateErrors.map((err) => (
-                        <Text
-                            key={err}
-                            theme={TextTheme.ERROR}
-                            text={validateErrorTranslates[err]}
-                            data-testid={'EditableProfileCard.Error'}
-                        />
-                    ))}
-                </div>
             </div>
         </DynamicModuleLoader>
     );

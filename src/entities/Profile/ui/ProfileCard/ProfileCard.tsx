@@ -39,10 +39,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeLastname,
         onChangeAge,
         onChangeCity,
-        onChangeUsername,
         onChangeAvatar,
-        onChangeCurrency,
+        onChangeUsername,
         onChangeCountry,
+        onChangeCurrency,
     } = props;
     if (isLoading) {
         return (
@@ -79,18 +79,18 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     )}
                 </div>
                 <Input
-                    placeholder={t('Ваше имя')}
                     value={data?.firstname}
+                    placeholder={t('Ваше имя')}
                     onChange={onChangeFirstname}
                     readonly={readonly}
-                    data-testid={'ProfileCard.firstname'}
+                    data-testid="ProfileCard.firstname"
                 />
                 <Input
-                    placeholder={t('Ваша фамилия')}
                     value={data?.lastname}
+                    placeholder={t('Ваша фамилия')}
                     onChange={onChangeLastname}
                     readonly={readonly}
-                    data-testid={'ProfileCard.lastname'}
+                    data-testid="ProfileCard.lastname"
                 />
                 <Input
                     value={data?.age}

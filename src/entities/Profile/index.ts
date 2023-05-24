@@ -1,6 +1,4 @@
 export { ValidateProfileError } from './model/consts/profileConsts';
-export type { ProfileSchema, Profile } from './model/types/profile';
-
 export {
     profileActions,
 } from './model/slice/profileSlice';
@@ -38,3 +36,6 @@ export {
 export {
     getProfileValidateErrors,
 } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+export type {
+    Profile,
+} from './model/types/profile';

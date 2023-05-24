@@ -4,6 +4,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import Fade from './Fade';
 import { Theme } from '@/shared/const/theme';
 
+
 export default {
     title: 'widgets/Fade',
     component: Fade,

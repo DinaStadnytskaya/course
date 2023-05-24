@@ -1,6 +1,5 @@
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { ValidateProfileError } from '../consts/profileConsts';
 
 export interface Profile {
   id?: string;
@@ -12,13 +11,4 @@ export interface Profile {
   city?: string;
   username?: string;
   avatar?: string;
-}
-
-export interface ProfileSchema {
-  data?: Profile;
-  form?: Profile;
-  isLoading: boolean;
-  error?: string;
-  readonly: boolean;
-  validateErrors?: ValidateProfileError[];
 }

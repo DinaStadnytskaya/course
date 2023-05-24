@@ -8,7 +8,7 @@ import {
 import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 import { UserSchema } from '@/entities/User';
-import { ProfileSchema } from '@/entities/Profile';
+
 import { ArticleDetailsSchema } from '@/entities/Article';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { SaveScrollSchema } from '@/features/SavesScroll';
@@ -16,6 +16,7 @@ import { rtkApi } from '@/shared/api/rtkApi';
 import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { LoginSchema } from '@/features/AuthByUsername';
+import { ProfileSchema } from '@/features/editableProfileCard';
 
 export interface StateSchema {
   user: UserSchema;

@@ -1,9 +1,11 @@
+/* eslint-disable plugin-ds/layer-imports */
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
-import { ProfileSchema } from '../types/profile';
+
 import { profileActions, profileReducer } from './profileSlice';
 import { ValidateProfileError } from '../consts/profileConsts';
+import { ProfileSchema } from '@/features/editableProfileCard';
 
 const data = {
     username: 'Denah',
