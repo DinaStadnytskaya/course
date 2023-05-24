@@ -15,5 +15,5 @@ const Template: ComponentStory<typeof ArticleEditForm> = (args) => <ArticleEditF
 
 export const Normal = Template.bind({});
 Normal.args = {
-   
+
 };
