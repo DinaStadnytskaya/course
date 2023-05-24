@@ -1,7 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import cls from './ArticleEditForm.module.scss';
 import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './ArticleEditForm.module.scss';
 
 interface ArticleEditFormProps {
     className?: string;
@@ -10,10 +10,8 @@ interface ArticleEditFormProps {
 export const ArticleEditForm = memo((props: ArticleEditFormProps) => {
     const { className } = props;
     const { t } = useTranslation();
-    
+
     return (
-        <div className={classNames(cls.ArticleEditForm, {}, [className])}>
-           
-        </div>
+        <div className={classNames(cls.ArticleEditForm, {}, [className])} />
     );
 });
