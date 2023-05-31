@@ -5,19 +5,24 @@ import { MdNotes } from 'react-icons/md';
 import { SiHomebridge } from 'react-icons/si';
 import { getAuthUserData } from '@/entities/User';
 import { SidebarItemType } from '../types/sidebar';
-import { RoutePath } from '@/shared/const/router';
+import {
+    getRouteAbout,
+    getRouteArticles,
+    getRouteMain,
+    getRouteProfile,
+} from '@/shared/const/router';
 
 export const getSidebarItems = createSelector(
     getAuthUserData,
     (userData) => {
         const sidebarItemsList: SidebarItemType[] = [
             {
-                path: RoutePath.main,
+                path: getRouteMain(),
                 Icon: SiHomebridge,
                 text: 'Главная',
             },
             {
-                path: RoutePath.about,
+                path: getRouteAbout(),
                 Icon: BsJournalRichtext,
                 text: 'О сайте',
             },
@@ -26,13 +31,13 @@ export const getSidebarItems = createSelector(
         if (userData) {
             sidebarItemsList.push(
                 {
-                    path: RoutePath.profile + userData.id,
+                    path: getRouteProfile(userData.id),
                     Icon: GiCaptainHatProfile,
                     text: 'Профиль',
                     authOnly: true,
                 },
                 {
-                    path: RoutePath.articles,
+                    path: getRouteArticles(),
                     Icon: MdNotes,
                     text: 'Статьи',
                     authOnly: true,

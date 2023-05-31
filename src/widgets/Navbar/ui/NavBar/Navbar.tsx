@@ -11,9 +11,9 @@ import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { getAuthUserData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
-import { RoutePath } from '@/shared/const/router';
 import { AvatarDropdown } from '@/features/AvatarDropdown';
 import cls from './Navbar.module.scss';
+import { getRouteArticleCreate, getRouteMain } from '@/shared/const/router';
 
 interface NavbarProps {
     className?: string;
@@ -33,7 +33,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <div className={cls.NavbarLogo}>
-                    <AppLink to={RoutePath.main}>
+                    <AppLink to={getRouteMain()}>
                         <Text
                             size={TextSize.XL}
                             title={t('Айтилиба')}
@@ -43,7 +43,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 </div>
                 <HStack gap="32" align="center">
                     <AppLink
-                        to={RoutePath.article_create}
+                        to={getRouteArticleCreate()}
                         theme={AppLinkTheme.SECONDARY}
                     >
                         {t('Создать статью')}
@@ -57,7 +57,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     return (
         <header className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.NavbarLogo}>
-                <AppLink to={RoutePath.main}>
+                <AppLink to={getRouteMain()}>
                     <Text
                         size={TextSize.XL}
                         title={t('Айтилиба')}

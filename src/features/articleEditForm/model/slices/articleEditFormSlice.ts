@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ArticleEditFormSchema } from '../types/articleEditFormSchema';
 
 const initialState: ArticleEditFormSchema = {
-    
+
 };
 
 export const articleEditFormSlice = createSlice({
@@ -10,7 +10,7 @@ export const articleEditFormSlice = createSlice({
     initialState,
     reducers: {
         template: (state, action: PayloadAction<string>) => {
-           
+
         },
     },
     // extraReducers: (builder) => {

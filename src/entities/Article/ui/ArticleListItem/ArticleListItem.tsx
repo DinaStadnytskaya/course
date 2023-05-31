@@ -8,7 +8,6 @@ import { Text } from '@/shared/ui/Text';
 import { Card } from '@/shared/ui/Card';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Button, ThemeButton } from '@/shared/ui/Button';
-
 import { AppLink } from '@/shared/ui/AppLink';
 
 import {
@@ -18,7 +17,7 @@ import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent }
     from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleDetails, getRouteProfile } from '@/shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;
@@ -78,7 +77,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                             />
                         ) }
                         <div className={cls.ArticleFooter}>
-                            <AppLink to={RoutePath.article_details + article.id} target={target}>
+                            <AppLink to={getRouteArticleDetails(article.id)} target={target}>
                                 <Button
                                     className={cls.ArticleButton}
                                     theme={ThemeButton.BACKGROUND_INVERTED}
@@ -104,13 +103,13 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         >
             <div className={cls.SkeletonWrapper}>
                 <AppLink
-                    to={RoutePath.profile + article.user.id}
+                    to={getRouteProfile(article.user.id)}
                 >
                     <Avatar size={50} src={article.user.avatar} />
                 </AppLink>
             </div>
             <Card className={cls.ArticleCard}>
-                <AppLink to={RoutePath.article_details + article.id} target={target} className={cls.ArticleLink}>
+                <AppLink to={getRouteArticleDetails(article.id)} target={target} className={cls.ArticleLink}>
                     <div className={cls.ArticleImageWrapper}>
                         <img
                             src={article.img}
