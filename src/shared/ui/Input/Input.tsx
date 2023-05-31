@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {
     InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
@@ -41,6 +42,13 @@ export const Input = memo((props: InputProps) => {
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
         setCaretPosition(e.target.value.length);
+        // const { value } = e.target;
+        // if (value?.length !== undefined) {
+        //     onChange?.(value);
+        //     if (value.length === 0) {
+        //         setCaretPosition(0);
+        //     }
+        // }
     };
 
     const onBlur = () => {

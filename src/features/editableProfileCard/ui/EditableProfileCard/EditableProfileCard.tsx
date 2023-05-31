@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable plugin-ds/public-api-imports */
 /* eslint-disable react/jsx-curly-brace-presence */
 import { useTranslation } from 'react-i18next';
@@ -31,7 +32,7 @@ interface EditableProfileCardProps {
     className?: string;
     id?: string;
 }
-const initialReducers: ReducersList = {
+const reducers: ReducersList = {
     profile: profileReducer,
 };
 
@@ -91,7 +92,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     }, [dispatch]);
 
     return (
-        <DynamicModuleLoader reducers={initialReducers}>
+        <DynamicModuleLoader reducers={reducers}>
             <div className={classNames(cls.EditableProfileCard, {}, [className])}>
                 <EditableProfileCardHeader />
                 <div className={cls.ErrorBlock}>
