@@ -54,7 +54,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     return (
         <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
             <Card className={cls.SelectCard}>
-                <Select
+                <Select<ArticleSortField>
                     options={sortFieldOptions}
                     label={t('Сортировать по')}
                     value={sort}
