@@ -1,6 +1,9 @@
 import { useMemo, CSSProperties } from 'react';
+import { FaUserCircle } from 'react-icons/fa';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
+import { AppImage } from '../AppImage';
+import { Skeleton } from '../Skeleton';
 
  interface AvatarProps {
      className?: string;
@@ -10,15 +13,19 @@ import cls from './Avatar.module.scss';
 }
 
 export const Avatar = ({
-    className, src, size, alt,
+    className, src, size = 100, alt,
 }: AvatarProps) => {
     const mods: Mods = {};
     const styles = useMemo<CSSProperties>(() => ({
-        width: size || 80,
-        height: size || 80,
+        width: size,
+        height: size,
     }), [size]);
+    const fallback = <Skeleton width={size} height={size} border="50%" />;
+    const errorFallback = <FaUserCircle style={{ fontSize: '40px' }} />;
     return (
-        <img
+        <AppImage
+            fallback={fallback}
+            errorFallback={errorFallback}
             src={src}
             alt={alt}
             style={styles}

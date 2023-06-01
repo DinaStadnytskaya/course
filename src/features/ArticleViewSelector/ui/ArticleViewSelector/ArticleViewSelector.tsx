@@ -5,7 +5,7 @@ import { memo } from 'react';
 import { Button, ThemeButton } from '@/shared/ui/Button';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleViewSelector.module.scss';
-import { ArticleView } from '../../model/consts/articleConsts';
+import { ArticleView } from '@/entities/Article';
 
  interface ArticleViewSelectorProps {
      className?: string;

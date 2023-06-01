@@ -6,7 +6,7 @@ import { Select, SelectOption } from '@/shared/ui/Select';
 import { SortOrder } from '@/shared/types';
 import { Card } from '@/shared/ui/Card';
 import cls from './ArticleSortSelector.module.scss';
-import { ArticleSortField } from '../../model/consts/articleConsts';
+import { ArticleSortField } from '@/entities/Article';
 
 interface ArticleSortSelectorProps {
     className?: string;
