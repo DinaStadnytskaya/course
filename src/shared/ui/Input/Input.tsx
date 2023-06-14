@@ -50,13 +50,11 @@ export const Input = memo((props: InputProps) => {
         //     }
         // }
     };
-
-    const onBlur = () => {
-        setIsFocused(false);
-    };
-
     const onFocus = () => {
         setIsFocused(true);
+    };
+    const onBlur = () => {
+        setIsFocused(false);
     };
 
     const onSelect = (e: any) => {

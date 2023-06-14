@@ -7,7 +7,7 @@ import Fade from '@/widgets/Fade/ui/Fade';
 
 const MainPage = () => {
     return (
-        <Page className={cls.MainPage}>
+        <Page data-testid="MainPage" className={cls.MainPage}>
             <Fade />
         </Page>
     );

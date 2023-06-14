@@ -25,6 +25,7 @@ export default {
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
+        '\\.(jpg|jpeg|png)$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
         '^@/(.*)$': '<rootDir>/src/$1',
         // 'entities/(.*)': '<rootDir>src/entities/$1',
@@ -187,4 +188,5 @@ export default {
 
     // Whether to use watchman for file crawling
     // watchman: true,
+
 };

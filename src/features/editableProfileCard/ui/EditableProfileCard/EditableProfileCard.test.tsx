@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
 import { $api } from '@/shared/api/api';
-import { componentRender } from '@/shared/lib/componentrender/componentRender';
+import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
 import { profileReducer } from '@/entities/Profile/testing';
 import { EditableProfileCard } from './EditableProfileCard';
 import { Profile } from '@/entities/Profile';

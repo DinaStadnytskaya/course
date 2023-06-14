@@ -11,7 +11,7 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof AdminPanelPage>;
-const Template: ComponentStory<typeof AdminPanelPage> = (args) => <AdminPanelPage {...args} />;
+const Template: ComponentStory<typeof AdminPanelPage> = () => <AdminPanelPage />;
 export const Normal = Template.bind({});
 Normal.args = {};
 Normal.decorators = [StoreDecorator({})];
